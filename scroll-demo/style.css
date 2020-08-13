@@ -1,0 +1,138 @@
+
+
+/* foreground (balloons/landscape)*/
+
+
+/* background layer */
+
+div#parallax-bg-3 {
+  position: fixed;
+  width: 960px;
+  top: 0;
+  left: 50%;
+  margin-left: -470px;
+  z-index: 3;
+}
+
+/* foreground */
+
+div#parallax-bg-3 div {
+  background-repeat: no-repeat;
+  position: absolute;
+  display: block;
+}
+
+div#bg-3-1 {
+  background: url("../images/cutA/cutA-1.png");
+  width: 529px;
+  height: 757px;
+  top: -200px;
+  right: 100px;
+}
+
+div#bg-3-2 {
+  background: url("../images/cutA/cutA-2.png");
+  width: 603px;
+  height: 583px;
+  top: 200px;
+  left: 70px;
+}
+
+div#bg-3-3 {
+  background: url("../images/cutA/cutA-3.png");
+  width: 446px;
+  height: 713px;
+  top: 200px;
+  right: 140px;
+}
+
+div#bg-3-4 {
+  background: url("../images/cutA/cutA-20.png");
+  width: 7000px;
+  height: 120px;
+  top: 100vh;
+  margin-top: -100px;
+  right: -5000px;
+  z-index: -1;
+}
+
+/* middle layer clouds */
+
+div#parallax-bg-2 div {
+  background: url("../images/cutA/cutA-6.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  display: block;
+  width: 488px;
+  height: 138px;
+}
+
+div#bg-2-1 {
+  top: 15vh;
+  left: 2000px;
+}
+
+div#bg-2-2 {
+  top: 10vh;
+  right: 3000px;
+}
+
+div#bg-2-3 {
+  top: 20vh;
+  left: 4000px;
+}
+
+div#bg-2-4 {
+  top: 5vh;
+  right: 560px;
+}
+
+div#bg-2-5 {
+  top: 7vh;
+  left: 1440px;
+}
+
+div#bg-2-6 {
+  top: 30vh;
+  left: 340px;
+}
+
+/*background layer clouds */
+
+div#parallax-bg-1 div {
+  background-repeat: no-repeat;
+  position: absolute;
+  display: block;
+  width: 488px;
+  height: 138px;
+}
+
+div#bg-1-1 {
+  background: url("../images/cutA/cutA-10.png");
+  top: 5vh;
+  left: 450px;
+}
+
+div#bg-1-2 {
+  background: url("../images/cutA/cutA-11.png");
+  top: 15vh;
+  left: 0px;
+}
+
+div#bg-1-3 {
+  background: url("../images/cutA/cutA-12.png");
+  top: 26vh;
+  right: 5000px;
+}
+
+div#bg-1-4 {
+  background: url("../images/cutA/cutA-13.png");
+  top: 40vh;
+  left: 200px;
+}
+
+div#bg-1-5 {
+  background: url("../images/cutA/cutA-14.png");
+  top: 30vh;
+  left: 3000px;
+}
