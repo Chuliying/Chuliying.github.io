@@ -2,7 +2,7 @@ body { background: #e6e7e8; height: 18600px; }
 
 .wrapper { position: fixed; top: 0; left: 0; height: 100%; width: 100%; }
 .wrapper .parallax-bg { height: 100%; width: 100%; position: absolute; z-index: 100; }
-.wrapper .parallax-bg > div { animation: float 4s ease-in-out infinite; position: absolute; }
+.wrapper .parallax-bg > div { border: solid 1px #000; animation: float 4s ease-in-out infinite; position: absolute; }
 .wrapper .parallax-bg:nth-child(1) { z-index: 3; }
 .wrapper .parallax-bg:nth-child(1) > div img { height: 200px; }
 .wrapper .parallax-bg:nth-child(1) > div:nth-child(1) { top: 55%; left: 2000px; }

@@ -17,6 +17,7 @@ body {
         position: absolute;
         z-index: 100;
         >div{
+            border: solid 1px #000;
             animation: float 4s ease-in-out infinite;
             position: absolute;
         }
