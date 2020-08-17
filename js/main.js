@@ -18,13 +18,13 @@ $(document).ready(function () {
     var vw = $(window).width();
 
     $(bgItem).each(function (i) {
-        gsap.to($(this), 5, {
+        gsap.to($(this), 4, {
             x: randomN(-vw, vw, vw),
             y: randomN(-vh, vh, vh),
             z: random(-500, 500, 0),
             rotation: random(-5, 5),
             ease: 'none',
-            scale: 3.5,
+            scale: 3.5 - i* .005,
             delay: 2.5 + i * .05
         });
     })
@@ -32,7 +32,7 @@ $(document).ready(function () {
     $(bgItem).each(function (i) {
         gsap.to($(this), 0.5, {
             opacity: 0,
-            delay: 4.5 + i * .02
+            delay: 4.5 + i * .05
         });
     })
 
@@ -90,10 +90,10 @@ $(document).ready(function () {
     function randomN(min, max, dir) {
         var randomN = (Math.random() * (max - min)) + min;
         if (randomN < 0){
-            randomN -= 1.5*dir;
+            randomN -= 0.75*dir;
         }
         else{
-            randomN += 1.5*dir;
+            randomN += 0.75*dir;
         }
         return randomN;
     }
