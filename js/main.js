@@ -4,7 +4,7 @@ $(document).ready(function () {
     $hamburger.click(function(){
         $(this).toggleClass('open');
         $menu.fadeToggle(500);
-        
+
     })
 
     const $cutLanding = $('#cut-landing');
@@ -25,7 +25,7 @@ $(document).ready(function () {
 
         gsap.fromTo(bgItem, { opacity: 0, y: 120 }, { opacity: 1, y: 0, duration: 3 });
 
-        gsap.to($('.header'), 1, {
+        gsap.to($('.header, .bg-items p'), 1, {
             opacity: 1,
             delay: 4
         });

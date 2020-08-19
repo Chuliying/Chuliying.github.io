@@ -329,32 +329,42 @@
             li {
                 margin-top: 20%;
                 transform: scale(1.2);
+                cursor: pointer;
+                p{
+                    color: #ccc;
+                    background: #000;
+                    padding: 15px 25px;
+                    position: absolute;
+                    display: inline-block;
+                    font-size: 32px;
+                    opacity: 0;
+                }
                 &:nth-child(1) {
-                    img {
+                    p, img {
                         bottom: 67%;
                         left: -5%;
                     }
                 }
                 &:nth-child(2) {
-                    img {
+                    p, img {
                         top: 30%;
                         right: 11%;
                     }
                 }
                 &:nth-child(3) {
-                    img {
+                    p, img {
                         top: -13%;
                         left: 94%;
                     }
                 }
                 &:nth-child(4) {
-                    img {
+                    p, img {
                         top: -68%;
                         right: 25%;
                     }
                 }
                 &:nth-child(5) {
-                    img {
+                    p, img {
                         top: 28%;
                         left: 7%;
                     }
