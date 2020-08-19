@@ -1,4 +1,12 @@
 $(document).ready(function () {
+    $hamburger = $('.hamburger-container');
+    $menu = $('.menu');
+    $hamburger.click(function(){
+        $(this).toggleClass('open');
+        $menu.fadeToggle(500);
+        
+    })
+
     const $cutLanding = $('#cut-landing');
     $cutLanding.imagesLoaded(function () {
         $cutLanding.fadeIn(1500);

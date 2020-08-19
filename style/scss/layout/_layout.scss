@@ -1,7 +1,18 @@
 @import '_landing_bg';
+@import '_menu';
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&display=swap');
+
 
 * {
   box-sizing: border-box;
+  font-family: 'Noto Serif TC', serif;
+}
+
+a{
+  color: #fff;
+  text-decoration: none;
 }
 
 .wrapper {
@@ -21,7 +32,7 @@
   padding: 15px;
   z-index: 10000;
   opacity: 0;
-  
+
   img{
     width: 300px;
   }
