@@ -27,11 +27,11 @@ $(document).ready(function () {
 
         gsap.to($('.header, .bg-items p'), 1, {
             opacity: 1,
-            delay: 4
+            delay: 5
         });
 
         $(layer).each(function (i) {
-            gsap.to($(this), 2, {
+            gsap.to($(this), 3, {
                 z: 150,
                 rotation: random(-10, 10),
                 ease: 'none',
@@ -39,14 +39,14 @@ $(document).ready(function () {
             });
         })
 
-        gsap.to($('.layer-7'), 2, {
+        gsap.to($('.layer-7'), 3, {
             z: -25,
             ease: 'none',
             delay: 2.15
         });
 
 
-        gsap.to($('.layer-8'), 2, {
+        gsap.to($('.layer-8'), 3, {
             z: -30,
             ease: 'none',
             delay: 2.165
