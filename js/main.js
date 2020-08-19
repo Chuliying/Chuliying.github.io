@@ -17,6 +17,11 @@ $(document).ready(function () {
 
         gsap.fromTo(bgItem, { opacity: 0, y: 120 }, { opacity: 1, y: 0, duration: 3 });
 
+        gsap.to($('.header'), 1, {
+            opacity: 1,
+            delay: 4
+        });
+
         $(layer).each(function (i) {
             gsap.to($(this), 2, {
                 z: 150,
