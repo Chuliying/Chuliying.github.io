@@ -2,103 +2,56 @@ $(document).ready(function () {
     const $cutLanding = $('#cut-landing');
     $cutLanding.imagesLoaded(function () {
         $cutLanding.fadeIn(1500);
+        $('.main-logo').fadeIn(1500);
         setTimeout(function () {
             $cutLanding.addClass('show')
         }, 550);
 
         setTimeout(function () {
             $('.main-logo').fadeOut(1500);
-        }, 4000);
-    })
+        }, 2000);
 
-    const bgItem = $('.bg-items li');
+        const layer = $('.bg-items .layer');
+        const floatingImg = $('.layer-7 img');
+        const bgItem = $('.bg-items');
 
+        gsap.fromTo(bgItem, { opacity: 0, y: 120 }, { opacity: 1, y: 0, duration: 3 });
 
-    var vh = $(window).height();
-    var vw = $(window).width();
+        $(layer).each(function (i) {
+            gsap.to($(this), 2, {
+                z: 150,
+                rotation: random(-10, 10),
+                ease: 'none',
+                delay: 2.05 + 0.05 * i
+            });
+        })
 
-    $(bgItem).each(function (i) {
-        gsap.to($(this), 4, {
-            x: randomN(-vw, vw, vw),
-            y: randomN(-vh, vh, vh),
-            z: random(-500, 500, 0),
-            rotation: random(-5, 5),
+        gsap.to($('.layer-7'), 2, {
+            z: -25,
             ease: 'none',
-            scale: 3.5 - i* .005,
-            delay: 2.5 + i * .05
+            delay: 2.15
         });
-    })
 
-    $(bgItem).each(function (i) {
-        gsap.to($(this), 0.5, {
-            opacity: 0,
-            delay: 4.5 + i * .05
+
+        gsap.to($('.layer-8'), 2, {
+            z: -30,
+            ease: 'none',
+            delay: 2.165
         });
+
+        $(floatingImg).each(function (i) {
+            gsap.to($(this), 4, {
+                y: random(-15, 15),
+                rotation: random(-5, 5),
+                yoyo: true,
+                ease: 'none',
+                repeat: -1
+            });
+        })
+
     })
-
-
-    // $('.p-2').each(function (i) {
-    //     TweenMax.to($(this), 5, {
-    //         x: randomN(-vw, vw, vw),
-    //         y: randomN(-vh, vh, vh),
-    //         z: random(-500, 500, 0),
-    //         rotation: random(-50, 50),
-    //         scale: 3,
-    //         delay: 3.35+ i * .02
-    //     });
-    // })
-    // $('.p-3').each(function (i) {
-    //     TweenMax.to($(this), 5, {
-    //         x: randomN(-vw, vw, vw),
-    //         y: randomN(-vh, vh, vh),
-    //         z: random(-500, 500, 0),
-    //         rotation: random(-50, 50),
-    //         ease: 'none',
-    //         scale: 3,
-    //         delay: 3.5+ i * .02
-    //     });
-    // })
-    // $('.p-4').each(function (i) {
-    //     TweenMax.to($(this),5, {
-    //         x: randomN(-vw, vw, vw),
-    //         y: randomN(-vh, vh, vh),
-    //         z: random(-500, 500, 0),
-    //         rotation: random(-50, 50),
-    //         ease: 'none',
-    //         scale: 3,
-    //         delay: 3.75+ i * .02
-    //     });
-    // })
-    // $('.p-5').each(function (i) {
-    //     TweenMax.to($(this), 5, {
-    //         x: randomN(-vw, vw, vw),
-    //         y: randomN(-vh, vh, vh),
-    //         z: random(-500, 500, 0),
-    //         rotation: random(-30, 30),
-    //         ease: 'none',
-    //         scale: 3,
-    //         delay: 4+ i * .02
-    //     });
-    // })
-  
-
 
     function random(min, max) {
         return (Math.random() * (max - min)) + min;
     }
-
-    function randomN(min, max, dir) {
-        var randomN = (Math.random() * (max - min)) + min;
-        if (randomN < 0){
-            randomN -= 0.75*dir;
-        }
-        else{
-            randomN += 0.75*dir;
-        }
-        return randomN;
-    }
-
-    function fadeout(){
-        $(this).fadeOut();
-     }
 });
