@@ -34,21 +34,21 @@ $(document).ready(function () {
             gsap.to($(this), 3, {
                 z: 150,
                 rotation: random(-10, 10),
-                ease: "steps(18)",
+                ease: 'none',
                 delay: 2.05 + 0.05 * i
             });
         })
 
         gsap.to($('.layer-7'), 3, {
             z: -25,
-            ease: "steps(18)",
+            ease: 'none',
             delay: 2.15
         });
 
 
         gsap.to($('.layer-8'), 3, {
             z: -30,
-            ease: "steps(18)",
+            ease: 'none',
             delay: 2.165
         });
 
