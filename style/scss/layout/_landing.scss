@@ -1,5 +1,5 @@
 #cut-landing {
-    display: none;
+    z-index: 100;
     max-width: 1024px;
     margin: auto;
     height: 80vh;
@@ -381,4 +381,9 @@
             }
         }
     }
+}
+
+
+#cut-2,#cut-3,#cut-4{
+    display: none;
 }

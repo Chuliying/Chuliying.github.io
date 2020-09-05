@@ -1,4 +1,4 @@
-#cut-1 {
+#cut-1{
   transform: perspective(150px) translateY(200px) translateZ(-200px);
   opacity: 0;
   ul {
@@ -17,6 +17,7 @@
   }
   .clip {
     z-index: 100;
+    pointer-events: none;
     li {
       // 樹木
       &:nth-child(1) {
@@ -126,6 +127,7 @@
     height: 100%;
     width: 100%;
     transform: perspective(150px) translateZ(-200px) translateY(2000px);
+    cursor: pointer;
     z-index: 10;
 
     li {

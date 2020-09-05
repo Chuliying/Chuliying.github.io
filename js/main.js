@@ -13,6 +13,7 @@ $(document).ready(function () {
     const $cut_3 = $('#cut-3');
     const $cut_4 = $('#cut-4');
     const $cut = $('.cut');
+    const $videoContainer = $('.video-container');
 
     // random function
     function random(min, max) {
@@ -20,16 +21,23 @@ $(document).ready(function () {
     }
 
     const $scrollBody = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
-    //$scrollBody.scrollTop(0);
     // 滾動function
     function bodyScrollTo(_p) {
-        const _value = _scrollValue * _p + 50;
+        const _value = _scrollValue * _p + 150;
         $scrollBody.animate({
             scrollTop: _value
         }, 1000);
     }
 
     //  
+    // gsap.to($videoContainer, {
+    //     scrollTrigger: {
+    //         start: .8 * _scrollValue,
+    //         end: .9 * _scrollValue,
+    //         scrub: true
+    //     },
+    //     opacity: 0
+    // });
 
     $bg_li.each(function (i) {
         gsap.to($(this), {
@@ -42,17 +50,25 @@ $(document).ready(function () {
         });
     });
 
-    // $(window).scroll(function (event) {
-    //     const scroll = $(window).scrollTop();
-    //     for (i = 0; i < $bg_li.length; i++) {
-    //         if (scroll > (i + .99) * _scrollValue) {
-    //             $bg_li.eq(i).addClass('fadeOut');
-    //         }
-    //         else {
-    //             $bg_li.eq(i).removeClass('fadeOut');
-    //         }
-    //     }
-    // });
+    $(window).scroll(function (event) {
+        const scroll = $(window).scrollTop();
+        if ( scroll > .9*_scrollValue && scroll < .95*_scrollValue ){
+            $videoContainer.fadeIn(700);
+        }
+
+        else{
+            $videoContainer.fadeOut(150);
+        }
+
+        // for (i = 0; i < $bg_li.length; i++) {
+        //     if (scroll > (i + .99) * _scrollValue) {
+        //         $bg_li.eq(i).addClass('fadeOut');
+        //     }
+        //     else {
+        //         $bg_li.eq(i).removeClass('fadeOut');
+        //     }
+        // }
+    });
 
     // menu
     const $hamburger = $('.hamburger-container');
@@ -75,8 +91,6 @@ $(document).ready(function () {
     // image loaded then
 
     $body.imagesLoaded(function () {
-
-        onYouTubeIframeAPIReady();
 
         // LANDING CUT
         // show landing cut
@@ -141,7 +155,6 @@ $(document).ready(function () {
         gsap.to($cut_1, {
             scrollTrigger: {
                 scrub: 1,
-                markers: true,
                 start: "0",
                 end: .075 * _scrollValue
             },
@@ -179,7 +192,6 @@ $(document).ready(function () {
             gsap.to($(this), {
                 scrollTrigger: {
                     scrub: 1,
-                    markers: true,
                     start: .075 * _scrollValue,
                     end: .8 * _scrollValue
                 },
@@ -192,7 +204,6 @@ $(document).ready(function () {
         gsap.to($cut_1_Ul, {
             scrollTrigger: {
                 scrub: 1,
-                markers: true,
                 start: .8 * _scrollValue,
                 end: .9 * _scrollValue
             },
@@ -202,7 +213,6 @@ $(document).ready(function () {
         gsap.to($cut_1_Ul, {
             scrollTrigger: {
                 scrub: 1,
-                markers: true,
                 start: .8 * _scrollValue,
                 end: .9 * _scrollValue
             },

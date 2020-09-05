@@ -1,26 +1,25 @@
-@import '_landing';
-@import '_cut-1';
-@import '_menu';
+@import "_landing";
+@import "_cut-1";
+@import "_menu";
 
-@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&display=swap");
 
 $scrollValue: 2500px;
 
-
 * {
   box-sizing: border-box;
-  font-family: 'Noto Serif TC', serif;
+  font-family: "Noto Serif TC", serif;
 }
 
-a{
+a {
   color: #fff;
   text-decoration: none;
 }
 
-body{
+body {
   //overflow: hidden;
-  height: 4*$scrollValue;
+  height: 4 * $scrollValue;
 }
 
 .wrapper {
@@ -31,56 +30,56 @@ body{
   left: 0;
 }
 
-.header{
+.header {
   position: fixed;
   top: 0px;
   width: 100%;
   padding: 15px;
   z-index: 10000;
+  height: 0;
   opacity: 0;
 
-  img{
+  img {
     width: 300px;
   }
-  .hamburger-container{
+  .hamburger-container {
     position: absolute;
     right: 15px;
     top: 15px;
-
   }
 }
 
-.cut{
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
+.cut {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-   &.fadeOut{
-     display: none;
-   }
-   .clip{
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: auto;
-      height: 100%;
-      width: 100%;
-      background-size: 100% 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-   } 
+  &.fadeOut {
+    display: none;
+  }
+  .clip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
-.bg{
+.bg {
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   pointer-events: none;
-  li{
+  li {
     position: absolute;
     top: 0;
     left: 0;
@@ -93,41 +92,44 @@ body{
     opacity: 1;
     transition: 0.25s;
 
-    &.bg-0{
+    &.bg-0 {
       background: url(../../images/landing/landing-bg.png);
       z-index: -1;
     }
-    &.bg-1{
+    &.bg-1 {
       background-image: url("../../images/cut-1/cut-1-bg.png");
       z-index: -2;
     }
-    &.bg-2{
+    &.bg-2 {
       background-image: url("../../images/cut-2/cut-2-bg.png");
       z-index: -3;
     }
-    &.bg-3{
+    &.bg-3 {
       background-image: url("../../images/cut-3/cut-3-bg.png");
       z-index: -4;
     }
-    &.bg-4{
+    &.bg-4 {
       background-image: url("../../images/cut-4/cut-4-bg.png");
       z-index: -5;
     }
-    &.fadeOut{
+    &.fadeOut {
       opacity: 0;
     }
   }
 }
 
-
-
-.video-container{
-  width:100vw;
-  height:100vh;
-  overflow:hidden;
-  position:relative;
+.video-container {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  top: 28%;
+  left: 37%;
+  width: 46%;
+  height: 46%;
   z-index: 10000;
-  iframe{
+  background: transparent;
+  iframe {
+    background: transparent;
     pointer-events: none;
     left: 0;
     width: 100%;
