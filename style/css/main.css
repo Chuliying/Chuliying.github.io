@@ -2299,5 +2299,5 @@ body { height: 10000px; }
 .bg li.bg-4 { background-image: url("../../images/cut-4/cut-4-bg.png"); z-index: -5; }
 .bg li.fadeOut { opacity: 0; }
 
-.video-container { display: none; overflow: hidden; position: absolute; top: 28%; left: 37%; width: 46%; height: 46%; z-index: 10000; background: transparent; }
+.video-container { pointer-events: none; opacity: 0; overflow: hidden; position: absolute; top: 28%; left: 37%; width: 46%; height: 46%; z-index: 10000; background: transparent; }
 .video-container iframe { background: transparent; pointer-events: none; left: 0; width: 100%; height: 100%; position: absolute; top: -60px; left: 0; width: 100%; height: calc(100% + 120px); }

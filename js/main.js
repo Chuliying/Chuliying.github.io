@@ -29,15 +29,24 @@ $(document).ready(function () {
         }, 1000);
     }
 
-    //  
-    // gsap.to($videoContainer, {
-    //     scrollTrigger: {
-    //         start: .8 * _scrollValue,
-    //         end: .9 * _scrollValue,
-    //         scrub: true
-    //     },
-    //     opacity: 0
-    // });
+     
+    gsap.to($videoContainer, {
+        scrollTrigger: {
+            start: .9 * _scrollValue,
+            end: .91 * _scrollValue,
+            scrub: 1
+        },
+        opacity: 1
+    });
+
+    gsap.to($videoContainer, {
+        scrollTrigger: {
+            start: .95 * _scrollValue,
+            end: .97 * _scrollValue,
+            scrub: 1
+        },
+        opacity: 0
+    });
 
     $bg_li.each(function (i) {
         gsap.to($(this), {
@@ -50,25 +59,25 @@ $(document).ready(function () {
         });
     });
 
-    $(window).scroll(function (event) {
-        const scroll = $(window).scrollTop();
-        if ( scroll > .9*_scrollValue && scroll < .95*_scrollValue ){
-            $videoContainer.fadeIn(700);
-        }
+    // $(window).scroll(function (event) {
+    //     const scroll = $(window).scrollTop();
+    //     if ( scroll > .9*_scrollValue && scroll < .95*_scrollValue ){
+    //         $videoContainer.fadeIn(700);
+    //     }
 
-        else{
-            $videoContainer.fadeOut(150);
-        }
+    //     else{
+    //         $videoContainer.fadeOut(150);
+    //     }
 
-        // for (i = 0; i < $bg_li.length; i++) {
-        //     if (scroll > (i + .99) * _scrollValue) {
-        //         $bg_li.eq(i).addClass('fadeOut');
-        //     }
-        //     else {
-        //         $bg_li.eq(i).removeClass('fadeOut');
-        //     }
-        // }
-    });
+    //     for (i = 0; i < $bg_li.length; i++) {
+    //         if (scroll > (i + .99) * _scrollValue) {
+    //             $bg_li.eq(i).addClass('fadeOut');
+    //         }
+    //         else {
+    //             $bg_li.eq(i).removeClass('fadeOut');
+    //         }
+    //     }
+    // });
 
     // menu
     const $hamburger = $('.hamburger-container');
