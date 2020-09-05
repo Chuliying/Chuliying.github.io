@@ -3,14 +3,19 @@
 <head>
     <title>物的記憶 Matter And Memory</title>
     <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="images/favicon.png" />    
+
     <link rel="stylesheet" href="style/css/main.css">
 </head>
 
 <body>
+    <!-- <div class="video-container">
+        <div id="YouTubeVideoPlayerAPI" class=""></div>
+    </div> -->
     <div class="wrapper">
         <div class="header">
             <a href="index.html">
-                <img src="images/2x/Asset 1@2x.png" alt="">
+                <img src="images/logo.png" alt="">
             </a>
             <div class="hamburger-container">
                 <span></span>
@@ -36,7 +41,8 @@
                 <li>
                     <a href="#">
                         <div>
-                            <img src="https://image.freepik.com/free-vector/black-white-grunge-background_1102-902.jpg" alt="">
+                            <img src="https://image.freepik.com/free-vector/black-white-grunge-background_1102-902.jpg"
+                                alt="">
                             <h5>
                                 VOICE
                             </h5>
@@ -46,7 +52,8 @@
                 <li>
                     <a href="#">
                         <div>
-                            <img src="data:image/jpeg;base64,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" alt="">
+                            <img src="data:image/jpeg;base64,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"
+                                alt="">
                             <h5>
                                 VIDEO
                             </h5>
@@ -70,19 +77,24 @@
                     </li>
                 </ul>
             </div>
-       
         </div>
-        <div id="cut-landing" class="show">
+        <div class="bg">
+            <ul>
+                <!-- <li class="bg-0"></li> -->
+                <li class="bg-1"></li>
+                <li class="bg-2"></li>
+                <li class="bg-3"></li>
+                <li class="bg-4"></li>
+            </ul>
+        </div>
+        <!-- <div id="cut-landing">
             <div class="main-logo">
                 <img src="images/landing/landing-logo.png" alt="">
             </div>
-            <ul class="bg-items show">
-                <!-- 雲的 -->
-
+            <ul class="bg-items">
                 <li class="layer-1 layer">
                     <ul>
                         <li>
-
                             <img src="images/landing/landing-29.png" alt="">
                         </li>
                         <li>
@@ -137,7 +149,6 @@
                         </li>
                     </ul>
                 </li>
-
                 <li class="layer-4 layer">
                     <ul>
                         <li>
@@ -207,9 +218,9 @@
                         </li>
                     </ul>
                 </li>
-                <li class="layer-7">
+                <li class="layer-7 floating">
                     <ul>
-                        <li>
+                        <li class="landing-btn" key="1">
                             <img src="images/landing/landing-33.png" alt="">
                             <p>
                                 淡水 - 紅毛古蹟遺跡
@@ -218,19 +229,19 @@
                         <li>
                             <img src="images/landing/landing-34.png" alt="">
                         </li>
-                        <li>
+                        <li class="landing-btn" key="0">
                             <img src="images/landing/landing-35.png" alt="">
                             <p>
                                 瑞芳 - 黃金博物館
                             </p>
                         </li>
-                        <li>
+                        <li class="landing-btn" key="2">
                             <img src="images/landing/landing-36.png" alt="">
                             <p>
                                 八里 - 十三行博物館
                             </p>
                         </li>
-                        <li>
+                        <li class="landing-btn" key="3">
                             <img src="images/landing/landing-37.png" alt="">
                             <p>
                                 鶯歌 - 陶瓷博物館
@@ -246,14 +257,453 @@
                     </ul>
                 </li>
             </ul>
+        </div> -->
+        <div id="cut-1" class="cut">
+            <div class="clip">
+                <ul>
+                    <li data-speed="0.35">
+                        <img src="images/cut-image/cut-1-8.png" alt="">
+                    </li>
+                    <li data-speed="0.35">
+                        <img src="images/cut-image/cut-1-2.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.25">
+                        <img src="images/cut-image/cut-1-10.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.3">
+                        <img src="images/cut-image/cut-1-16.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.35">
+                        <img src="images/cut-image/cut-1-11.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.17">
+                        <img src="images/cut-image/cut-1-7.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.24">
+                        <img src="images/cut-image/cut-1-12.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.22">
+                        <img src="images/cut-image/cut-1-13.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.28">
+                        <img src="images/cut-image/cut-1-9.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.25">
+                        <img src="images/cut-image/cut-1-6.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.13">
+                        <img src="images/cut-image/cut-1-9.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.14">
+                        <img src="images/cut-image/cut-1-14.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.12">
+                        <img src="images/cut-image/cut-1-15.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.13">
+                        <img src="images/cut-image/cut-1-1.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.15">
+                        <img src="images/cut-image/cut-1-13.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="main">
+                <ul>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-1.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-2.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-3.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-4.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-5.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-6.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-7.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-8.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-9.png" alt="">
+                    </li>
+                    <li class="">
+                        <img src="images/cut-1/cut-1-main-10.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-11.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-12.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-13.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-14.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-15.png" alt="">
+                    </li>   
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-16.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-17.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-18.png" alt="">
+                    </li>
+                </ul>
+            </div>
         </div>
+        <div id="cut-2" class="cut">
+            <div class="clip">
+                <ul>
+                    <li data-speed="0.35">
+                        <img src="images/cut-image/cut-1-8.png" alt="">
+                    </li>
+                    <li data-speed="0.35">
+                        <img src="images/cut-image/cut-1-2.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.25">
+                        <img src="images/cut-image/cut-1-10.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.3">
+                        <img src="images/cut-image/cut-1-16.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.35">
+                        <img src="images/cut-image/cut-1-11.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.17">
+                        <img src="images/cut-image/cut-1-7.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.24">
+                        <img src="images/cut-image/cut-1-12.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.22">
+                        <img src="images/cut-image/cut-1-13.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.28">
+                        <img src="images/cut-image/cut-1-9.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.25">
+                        <img src="images/cut-image/cut-1-6.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.13">
+                        <img src="images/cut-image/cut-1-9.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.14">
+                        <img src="images/cut-image/cut-1-14.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.12">
+                        <img src="images/cut-image/cut-1-15.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.13">
+                        <img src="images/cut-image/cut-1-1.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.15">
+                        <img src="images/cut-image/cut-1-13.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="main">
+                <ul>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-1.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-2.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-3.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-4.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-5.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-6.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-7.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-8.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-9.png" alt="">
+                    </li>
+                    <li class="">
+                        <img src="images/cut-1/cut-1-main-10.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-11.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-12.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-13.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-14.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-15.png" alt="">
+                    </li>   
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-16.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-17.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-18.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="cut-3" class="cut">
+            <div class="clip">
+                <ul>
+                    <li data-speed="0.35">
+                        <img src="images/cut-image/cut-1-8.png" alt="">
+                    </li>
+                    <li data-speed="0.35">
+                        <img src="images/cut-image/cut-1-2.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.25">
+                        <img src="images/cut-image/cut-1-10.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.3">
+                        <img src="images/cut-image/cut-1-16.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.35">
+                        <img src="images/cut-image/cut-1-11.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.17">
+                        <img src="images/cut-image/cut-1-7.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.24">
+                        <img src="images/cut-image/cut-1-12.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.22">
+                        <img src="images/cut-image/cut-1-13.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.28">
+                        <img src="images/cut-image/cut-1-9.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.25">
+                        <img src="images/cut-image/cut-1-6.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.13">
+                        <img src="images/cut-image/cut-1-9.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.14">
+                        <img src="images/cut-image/cut-1-14.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.12">
+                        <img src="images/cut-image/cut-1-15.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.13">
+                        <img src="images/cut-image/cut-1-1.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.15">
+                        <img src="images/cut-image/cut-1-13.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="main">
+                <ul>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-1.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-2.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-3.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-4.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-5.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-6.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-7.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-8.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-9.png" alt="">
+                    </li>
+                    <li class="">
+                        <img src="images/cut-1/cut-1-main-10.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-11.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-12.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-13.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-14.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-15.png" alt="">
+                    </li>   
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-16.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-17.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-18.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="cut-4" class="cut">
+            <div class="clip">
+                <ul>
+                    <li data-speed="0.35">
+                        <img src="images/cut-image/cut-1-8.png" alt="">
+                    </li>
+                    <li data-speed="0.35">
+                        <img src="images/cut-image/cut-1-2.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.25">
+                        <img src="images/cut-image/cut-1-10.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.3">
+                        <img src="images/cut-image/cut-1-16.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.35">
+                        <img src="images/cut-image/cut-1-11.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.17">
+                        <img src="images/cut-image/cut-1-7.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.24">
+                        <img src="images/cut-image/cut-1-12.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.22">
+                        <img src="images/cut-image/cut-1-13.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.28">
+                        <img src="images/cut-image/cut-1-9.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.25">
+                        <img src="images/cut-image/cut-1-6.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.13">
+                        <img src="images/cut-image/cut-1-9.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.14">
+                        <img src="images/cut-image/cut-1-14.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.12">
+                        <img src="images/cut-image/cut-1-15.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.13">
+                        <img src="images/cut-image/cut-1-1.png" alt="">
+                    </li>
+                    <li class="floating" data-speed="0.15">
+                        <img src="images/cut-image/cut-1-13.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="main">
+                <ul>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-1.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-2.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-3.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-4.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-5.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-6.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-7.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-8.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-9.png" alt="">
+                    </li>
+                    <li class="">
+                        <img src="images/cut-1/cut-1-main-10.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-11.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-12.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-13.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-14.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-15.png" alt="">
+                    </li>   
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-16.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-17.png" alt="">
+                    </li>
+                    <li class="floating">
+                        <img src="images/cut-1/cut-1-main-18.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>  
+    
     </div>
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src='https://www.youtube.com/iframe_api'></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="js/webfont.js"></script>
     <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426'></script>
     <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js?v=7'></script>
-    <script src="js/main.js?v=1.1"></script>
+    <script src="js/media.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
