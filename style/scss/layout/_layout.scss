@@ -51,6 +51,10 @@ body {
   height: 100%;
   width: 100%;
   pointer-events: none;
+  >img{
+    width: 100%;
+    height: 100%;
+  }
   li {
     position: absolute;
     top: 0;
@@ -65,23 +69,23 @@ body {
     transition: 0.25s;
 
     &.bg-0 {
-      background-image: url(../../images/landing/landing-bg.png);
+      //background-image: url(../../images/landing/landing-bg.png);
       z-index: -1;
     }
     &.bg-1 {
-      background-image: url("../../images/cut-1/cut-1-bg.png");
+      //background-image: url("../../images/cut-1/cut-1-bg.png");
       z-index: -2;
     }
     &.bg-2 {
-      background-image: url("../../images/cut-2/cut-2-bg.png");
+      //background-image: url("../../images/cut-2/cut-2-bg.png");
       z-index: -3;
     }
     &.bg-3 {
-      background-image: url("../../images/cut-3/cut-3-bg.png");
+      //background-image: url("../../images/cut-3/cut-3-bg.png");
       z-index: -5;
     }
     &.bg-4 {
-      background-image: url("../../images/cut-4/cut-4-bg.png");
+      //background-image: url("../../images/cut-4/cut-4-bg.png");
       z-index: -4;
     }
     &.fadeOut {

@@ -2143,12 +2143,13 @@ a { color: #fff; text-decoration: none; }
 .header .hamburger-container { position: absolute; right: 15px; top: 15px; }
 
 .bg { position: fixed; top: 0; left: 0; height: 100%; width: 100%; pointer-events: none; }
+.bg > img { width: 100%; height: 100%; }
 .bg li { position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-size: 100% 100%; background-position: center; background-repeat: no-repeat; z-index: -1; opacity: 1; transition: 0.25s; }
-.bg li.bg-0 { background-image: url(../../images/landing/landing-bg.png); z-index: -1; }
-.bg li.bg-1 { background-image: url("../../images/cut-1/cut-1-bg.png"); z-index: -2; }
-.bg li.bg-2 { background-image: url("../../images/cut-2/cut-2-bg.png"); z-index: -3; }
-.bg li.bg-3 { background-image: url("../../images/cut-3/cut-3-bg.png"); z-index: -5; }
-.bg li.bg-4 { background-image: url("../../images/cut-4/cut-4-bg.png"); z-index: -4; }
+.bg li.bg-0 { z-index: -1; }
+.bg li.bg-1 { z-index: -2; }
+.bg li.bg-2 { z-index: -3; }
+.bg li.bg-3 { z-index: -5; }
+.bg li.bg-4 { z-index: -4; }
 .bg li.fadeOut { opacity: 0; }
 
 .video-container { pointer-events: none; overflow: hidden; position: fixed; width: auto; padding-bottom: 26%; z-index: 10000; background: black; display: none; }
