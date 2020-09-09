@@ -106,7 +106,8 @@ $(document).ready(function () {
     // image loaded then
 
     $body.imagesLoaded(function () {
-
+        $('.wrapper').fadeIn(500);
+        $('.loading').fadeOut(500);
         // LANDING CUT
         // show landing cut
         $cutLanding.fadeIn(1500);
