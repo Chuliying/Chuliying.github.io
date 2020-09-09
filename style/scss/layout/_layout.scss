@@ -1,11 +1,5 @@
-@import "_landing";
-@import "_cut-1";
-@import "_menu";
-
 @import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&display=swap");
-
-$scrollValue: 2500px;
 
 * {
   box-sizing: border-box;
@@ -19,7 +13,7 @@ a {
 
 body {
   //overflow: hidden;
-  height: 4 * $scrollValue;
+  //height: 4 * $scrollValue + 600; 
 }
 
 .wrapper {
@@ -49,29 +43,6 @@ body {
   }
 }
 
-.cut {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  &.fadeOut {
-    display: none;
-  }
-  .clip {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: auto;
-    height: 100%;
-    width: 100%;
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-
 .bg {
   position: fixed;
   top: 0;
@@ -93,7 +64,7 @@ body {
     transition: 0.25s;
 
     &.bg-0 {
-      background: url(../../images/landing/landing-bg.png);
+      background-image: url(../../images/landing/landing-bg.png);
       z-index: -1;
     }
     &.bg-1 {
@@ -106,11 +77,11 @@ body {
     }
     &.bg-3 {
       background-image: url("../../images/cut-3/cut-3-bg.png");
-      z-index: -4;
+      z-index: -5;
     }
     &.bg-4 {
       background-image: url("../../images/cut-4/cut-4-bg.png");
-      z-index: -5;
+      z-index: -4;
     }
     &.fadeOut {
       opacity: 0;
@@ -120,18 +91,37 @@ body {
 
 .video-container {
   pointer-events: none;
-  opacity: 0;
   overflow: hidden;
-  position: absolute;
-  top: 28%;
-  left: 37%;
-  width: 46%;
-  height: 46%;
+  position: fixed;
+  width: auto;
+  padding-bottom: 26%;
   z-index: 10000;
-  background: transparent;
+  background: black;
+  display: none;
+  &#video-1{
+    top: 26%;
+    left: 37%;
+    width: 46%;
+  }
+  &#video-2{
+    top: 26.7%;
+    left: 31.4%;
+    width: 46%;
+  }
+  &#video-3{
+    top: calc(9% + 1.5vw);
+    left: 28%;
+    width: 44%;
+    padding-bottom: 25%;
+  }
+  &#video-4{
+    top: calc(12.5% + 4.3vw);
+    left: 25.5%;
+    width: 42%;
+    padding-bottom: 24%;
+  }
   iframe {
     background: transparent;
-    pointer-events: none;
     left: 0;
     width: 100%;
     height: 100%;

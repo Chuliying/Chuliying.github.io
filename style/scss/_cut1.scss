@@ -1,23 +1,6 @@
-#cut-1{
+#cut-1 {
   transform: perspective(150px) translateY(200px) translateZ(-200px);
-  opacity: 0;
-  ul {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform: perspective(150px) translateZ(0px);
-  }
-
-  li {
-    position: absolute;
-    transform: perspective(150px) translateZ(0);
-    img {
-      width: 100%;
-    }
-  }
   .clip {
-    z-index: 100;
-    pointer-events: none;
     li {
       // 樹木
       &:nth-child(1) {

@@ -1,5 +1,6 @@
 $(document).ready(function () {
   const _scrollValue = 2500;
+  const $videoContainer = $('.video-container');
   const _video = [
     { name: "金瓜石音樂會", url: "zT3fWaDvhL4" },
     { name: "在與不在的場所", url: "ZAwqalcasys" },
@@ -7,48 +8,106 @@ $(document).ready(function () {
     { name: "沈睡在礦石01", url: "B3M-QTK8tXM" },
     { name: "沈睡在礦石02", url: "gIJSeqSwUs0" },
     { name: "沈睡在礦石03", url: "BPtFa4TsxSg" },
-    { name: "九芎樹", url: "XoLe8Gwznhw" }
+    { name: "九芎樹", url: "XoLe8Gwznhw" },
+    { name: "鶯歌音樂會", url: "hu3asNBSyzE" },
+    { name: "在與不在的場所", url: "lYPiK7pwLk4" },
+    { name: "過往與今日的交陪", url: "bHJG4_RNn6k" },
+    { name: "夜譚", url: "3XW6tQg6-kc" },
+    { name: "八里音樂會", url: "RJ-FXAz1iGU" },
+    { name: "在與不在的場所", url: "nW_edXI3hS4" },
+    { name: "過往與今日的交陪", url: "5foF1eTGDlo" },
+    { name: "千年垃圾場_上", url: "WnvuZXB60_Y" },
+    { name: "千年垃圾場_下", url: "ruvCWAvuHak" },
+    { name: "骨骸", url: "Kxt_LqQl-HY" },
+    { name: "貝殼", url: "JSgkPz-yFtw" },
+    { name: "淡水音樂會", url: "hu3asNBSyzE" },
+    { name: "在與不在的場所", url: "c8WPb4pFgis" },
+    { name: "過往與今日的交陪", url: "JoD5U-veTSM" },
+    { name: "消失的凱達格蘭", url: "hVaXFQk9Gwc" }
   ];
   const _music = [
     { name: "untitled", url: "media/untitled.mp3" },
     { name: "山吼", url: "media/roar.mp3" },
     { name: "礦山流動意象", url: "media/flow.mp3" },
-    { name: "黃金河", url: "media/goldenriver.mp3" }
+    { name: "黃金河", url: "media/goldenriver.mp3" },
+    { name: "湖山製片廠往日殘懷", url: "media/hushan.mp3" },
+    { name: "鳶山遙想河運時代", url: "media/transport.mp3" },
+    { name: "甕之音", url: "media/urn.mp3" },
+    { name: "鶯歌石黃昏風雨將至", url: "media/yingge.mp3" },
+    { name: "八里聲音散步", url: "media/media/walk.mp3" },
+    { name: "千年", url: "media/millennium.mp3" },
+    { name: "無知的音樂家：大坌坑聯想", url: "media/musian.mp3" },
+    { name: "夜宴", url: "media/banquet.mp3" },
+    { name: "淡水", url: "media/tamsui.mp3" },
+    { name: "電報", url: "media/telegraph.mp3" }
   ];
   const _voice = [
     { name: "九芎樹", url: "media/tree.mp3" },
     { name: "沈睡的礦石01", url: "media/sleep-1.mp3" },
     { name: "沈睡的礦石02", url: "media/sleep-2.mp3" },
     { name: "沈睡的礦石03", url: "media/sleep-3.mp3" },
-    { name: "物的記憶：鐵軌", url: "media/rail.mp3" }
+    { name: "物的記憶：鐵軌", url: "media/rail.mp3" },
+    { name: "夜譚", url: "media/night.mp3" },
+    { name: "物的記憶：煙囪", url: "media/chimney.mp3" },
+    { name: "八里暗時廣播電台", url: "media/radio.mp3" },
+    { name: "千年垃圾場上", url: "media/landfill-1.mp3" },
+    { name: "千年垃圾場下", url: "media/landfill-2.mp3" },
+    { name: "物的記憶：貝殼", url: "media/kai.mp3" },
+    { name: "計程車", url: "media/taxi.mp3" },
+    { name: "骨骸", url: "media/skeleton.mp3" },
+    { name: "日記", url: "media/diary.mp3" },
+    { name: "物的記憶：印章", url: "media/stamp.mp3" },
+    { name: "消失的凱達格蘭", url: "media/ketagalan.mp3" }
   ];
 
   var player;
   var music;
   var voice;
 
+  const $cut = $('.cut');
+
   $(window).scroll(function (event) {
     const scroll = $(window).scrollTop();
-    if ( scroll > .9*_scrollValue && scroll < .95*_scrollValue ){
+    for (i = 0; i < $cut.length; i++) {
+      if (scroll > (i + 0.7) * _scrollValue && scroll < (i + 0.9) * _scrollValue) {
+        const _cutValue = i + 1;
+        const _classValue = "video-" + _cutValue;
+        $videoContainer.removeAttr('id');
+        $videoContainer.attr('id', _classValue);
+      }
+
+      else {
+        player.stopVideo();
+        $videoContainer.fadeOut(300);
+        if (music) {
+          music.pause();
+        }
+        if (voice) {
+          voice.pause();
+        }
+      }
+    }
+    if (scroll > .9 * _scrollValue && scroll < .95 * _scrollValue) {
     }
 
-    else{
+    else {
       player.stopVideo();
-      if(music){
+      if (music) {
         music.pause();
       }
-      if(voice){
+      if (voice) {
         voice.pause();
       }
     }
-});
+  });
   onYouTubeIframeAPIReady();
   const $main_btn = $('.main li');
-  function bindEvent(){
-    console.log(player);
+  function bindEvent() {
     $main_btn.click(function () {
+      $videoContainer.fadeIn(300);
       const _type = $(this).attr('data-type');
       const _key = $(this).attr('data-key');
+      console.log(_key,_type);
       switch (_type) {
         case "video":
           player.loadVideoById(_video[_key].url);
@@ -62,14 +121,14 @@ $(document).ready(function () {
     const _key = $(this).attr('data-key');
     switch (_type) {
       case "music":
-        if(music){
+        if (music) {
           music.pause();
         }
         music = new Audio(_music[_key].url);
         music.play();
         break;
       case "voice":
-        if(voice){
+        if (voice) {
           voice.pause();
         }
         voice = new Audio(_voice[_key].url);
@@ -79,7 +138,7 @@ $(document).ready(function () {
   });
 
   function onYouTubeIframeAPIReady() {
-    window.YT.ready(function() {
+    window.YT.ready(function () {
       player = new YT.Player('YouTubeVideoPlayerAPI', {
         width: '100%',            // 播放器寬度 (px)
         height: '100%',           // 播放器高度 (px)
@@ -102,8 +161,3 @@ $(document).ready(function () {
   };
 });
 
-
-
-
-const _music = [];
-const _voice = [];
