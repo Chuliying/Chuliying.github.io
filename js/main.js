@@ -66,24 +66,24 @@ $(document).ready(function () {
         });
     });
 
-    // $(window).scroll(function (event) {
-    //     const scroll = $(window).scrollTop();
+    $(window).scroll(function (event) {
+        const scroll = $(window).scrollTop();
 
-    //     for (i = 0; i < $bg_li.length; i++) {
+        // for (i = 0; i < $bg_li.length; i++) {
 
-    //         if (scroll > (i + .99) * _scrollValue) {
-    //             $bg_li.eq(i).addClass('fadeOut');
-    //         }
-    //         else {
-    //             $bg_li.eq(i).removeClass('fadeOut');
-    //         }
-    //     }
+        //     if (scroll > (i + .99) * _scrollValue) {
+        //         $bg_li.eq(i).addClass('fadeOut');
+        //     }
+        //     else {
+        //         $bg_li.eq(i).removeClass('fadeOut');
+        //     }
+        // }
 
-    //     if (scroll == 4 * _scrollValue) {
-    //         window.scrollTo(0, 0);
+        if (scroll == 4 * _scrollValue) {
+            window.scrollTo(0, 0);
 
-    //     }
-    // });
+        }
+    });
 
     // menu
     const $hamburger = $('.hamburger-container');
