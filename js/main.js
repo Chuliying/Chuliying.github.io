@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
+
     // Var
     const _scrollValue = 2500;
     const $bg_li = $('.bg li')
@@ -62,7 +66,7 @@ $(document).ready(function () {
                 end: (0.999 + i) * _scrollValue,
                 scrub: true
             },
-            opacity: 0
+            autoAlpha: 0
         });
     });
 
@@ -78,9 +82,13 @@ $(document).ready(function () {
         //         $bg_li.eq(i).removeClass('fadeOut');
         //     }
         // }
+        console.log(scroll);
+        if (scroll == 0){
+            window.scrollTo(0,4*_scrollValue-35);
+        }
 
         if (scroll == 4 * _scrollValue) {
-            window.scrollTo(0, 0);
+            window.scrollTo(0, 5);
 
         }
     });
@@ -121,9 +129,9 @@ $(document).ready(function () {
             $mainLogo.fadeOut(1500);
         }, 2000);
 
-        gsap.fromTo($bgItem, { opacity: 0, y: 120 }, { opacity: 1, y: 0, duration: 3 });
+        gsap.fromTo($bgItem, { autoAlpha: 0, y: 120 }, { autoAlpha: 1, y: 0, duration: 3 });
         gsap.to($header.add($itemTitle), 1, {
-            opacity: 1,
+            autoAlpha: 1,
             delay: 5
         });
 
@@ -156,7 +164,7 @@ $(document).ready(function () {
 
             gsap.to($cutLanding.add($bg_0), 1, {
                 z: 150,
-                opacity: 0
+                autoAlpha: 0
             });
         });
 
@@ -177,7 +185,7 @@ $(document).ready(function () {
             },
             y: 0,
             z: 0,
-            opacity: 1
+            autoAlpha: 1
         });
 
         // cut 消失
@@ -200,7 +208,7 @@ $(document).ready(function () {
                 end: 1 * _scrollValue,
                 scrub: 0.5
             },
-            opacity: 0,
+            autoAlpha: 0,
             immediateRender: false
         })
 
@@ -266,7 +274,7 @@ $(document).ready(function () {
             },
             x: 0,
             z: 0,
-            opacity: 1
+            autoAlpha: 1
         });
         // cut 消失
         gsap.to($cut_2, {
@@ -287,7 +295,7 @@ $(document).ready(function () {
                 end: 2 * _scrollValue,
                 scrub: 0.5
             },
-            opacity: 0,
+            autoAlpha: 0,
             immediateRender: false
         })
 
@@ -350,7 +358,7 @@ $(document).ready(function () {
             },
             y: 0,
             z: 0,
-            opacity: 1
+            autoAlpha: 1
         });
         // cut 消失
         gsap.to($cut_3, {
@@ -371,7 +379,7 @@ $(document).ready(function () {
                 end: 4 * _scrollValue,
                 scrub: 0.5
             },
-            opacity: 0,
+            autoAlpha: 0,
             immediateRender: false
         })
 
@@ -432,7 +440,7 @@ $(document).ready(function () {
             },
             y: 0,
             z: 0,
-            opacity: 1
+            autoAlpha: 1
         });
         // cut 消失
         gsap.to($cut_4, {
@@ -453,7 +461,7 @@ $(document).ready(function () {
                 end: 3 * _scrollValue,
                 scrub: 0.5
             },
-            opacity: 0,
+            autoAlpha: 0,
             immediateRender: false
         })
 

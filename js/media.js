@@ -1,6 +1,9 @@
 $(document).ready(function () {
   const _scrollValue = 2500;
   const $videoContainer = $('.video-container');
+  const $mainLi = $('.main li');
+  var videoId = '';
+
   const _video = [
     { name: "金瓜石音樂會", url: "zT3fWaDvhL4" },
     { name: "在與不在的場所", url: "ZAwqalcasys" },
@@ -104,12 +107,12 @@ $(document).ready(function () {
   const $main_btn = $('.main li');
   function bindEvent() {
     $main_btn.click(function () {
-      $videoContainer.fadeIn(300);
       const _type = $(this).attr('data-type');
       const _key = $(this).attr('data-key');
-      console.log(_key,_type);
       switch (_type) {
         case "video":
+          $videoContainer.fadeIn(300);
+          videoId = _video[_key].url;
           player.loadVideoById(_video[_key].url);
           break;
       }
@@ -137,6 +140,28 @@ $(document).ready(function () {
     }
   });
 
+
+  $mainLi.each(function () {
+    const _type = $(this).attr('data-type');
+    const _key = $(this).attr('data-key');
+    let _title = "";
+    switch (_type) {
+      case "music":
+        _title = _music[_key].name;
+        break;
+      case "voice":
+        _title = _voice[_key].name;
+        break;
+      case "video":
+        _title = _video[_key].name;
+        break;
+    }
+    if (_type) {
+      $(this).append("<div><p>" + _type + "<br>" + _title + "</p></div>");
+
+    }
+  });
+
   function onYouTubeIframeAPIReady() {
     window.YT.ready(function () {
       player = new YT.Player('YouTubeVideoPlayerAPI', {
@@ -145,19 +170,27 @@ $(document).ready(function () {
         playerVars: {
           autoplay: 1,            // 自動播放影片
           controls: 0,            // 顯示播放器
-          showinfo: 0,            // 隱藏影片標題
           modestbranding: 0,      // 隱藏YouTube Logo
           fs: 0,                  // 隱藏全螢幕按鈕
           cc_load_policty: 0,     // 隱藏字幕
           iv_load_policy: 3,      // 隱藏影片註解
-          rel: 0,                 // 隱藏推薦
-          autohide: 0             // 影片播放時，隱藏影片控制列
+          autohide: 0,            // 影片播放時，隱藏影片控制列
+          playlist: '',
+          loop: 1
         },
         events: {
-          onReady: bindEvent
+          onReady: bindEvent,
+          onStateChange: onStateChange
         }
       });
     });
   };
+  function onStateChange(state) {
+    if (state.data === YT.PlayerState.ENDED) {
+      player.loadVideoById({
+        videoId: videoId
+      });
+    }
+  }
 });
 

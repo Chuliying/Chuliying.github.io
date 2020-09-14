@@ -60,9 +60,12 @@
             // 腳
             &:nth-child(1) {
                 left: 6%;
-                top: 33%;
+                top: 35%;
                 width: 29%;
                 z-index: 5;
+                div{
+                    top: 100%;
+                }
             }
             &:nth-child(2) {
                 top: 3%;
@@ -95,7 +98,7 @@
                 width: 17%;
                 top: 45%;
                 left: 15%;
-                z-index: 1;
+                z-index: 10;
             }
             &:nth-child(7) {
                 width: 21%;
@@ -107,12 +110,16 @@
                 width: 13%;
                 left: 5%;
                 top: 18%;
+                z-index: 10;
             }
             &:nth-child(9) {
                 width: 19%;
                 top: 9%;
                 left: 24%;
                 z-index: 1;
+                div{
+                    top: 25%;
+                }
             }
             &:nth-child(10) {
                 width: 12%;
@@ -130,6 +137,7 @@
                 width: 15%;
                 top: 6%;
                 left: 15%;
+                z-index: 10;
             }
             &:nth-child(13) {
                 width: 13%;

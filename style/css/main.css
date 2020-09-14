@@ -2144,7 +2144,7 @@ body { overflow: hidden; }
 .header img { width: 300px; }
 .header .hamburger-container { position: absolute; right: 15px; top: 15px; }
 
-.bg { position: fixed; top: 0; left: 0; height: 100%; width: 100%; pointer-events: none; }
+.bg { position: absolute; top: 0; left: 0; height: 100%; width: 100%; pointer-events: none; }
 .bg img { width: 100%; height: 100%; }
 .bg li { position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-size: 100% 100%; background-position: center; background-repeat: no-repeat; z-index: -1; opacity: 1; transition: 0.25s; }
 .bg li.bg-0 { z-index: -1; }
@@ -2154,7 +2154,7 @@ body { overflow: hidden; }
 .bg li.bg-4 { z-index: -4; }
 .bg li.fadeOut { opacity: 0; }
 
-.video-container { pointer-events: none; overflow: hidden; position: fixed; width: auto; padding-bottom: 26%; z-index: 10000; background: black; display: none; }
+.video-container { pointer-events: none; overflow: hidden; position: absolute; width: auto; padding-bottom: 26%; z-index: 10000; background: black; display: none; }
 .video-container#video-1 { top: 26%; left: 37%; width: 46%; }
 .video-container#video-2 { top: 26.7%; left: 31.4%; width: 46%; }
 .video-container#video-3 { top: calc(9% + 1.5vw); left: 28%; width: 44%; padding-bottom: 25%; }
@@ -2286,13 +2286,17 @@ body { overflow: hidden; }
 
 .hamburger-container.open span:nth-child(6) { left: calc(50% - 5px); top: 29px; }
 
-.cut { position: fixed; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; }
+.cut { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; }
 .cut.active { pointer-events: auto; }
 .cut ul { position: absolute; width: 100%; height: 100%; transform: perspective(150px) translateZ(0px); }
 .cut li { position: absolute; transform: perspective(150px) translateZ(0); }
 .cut li img { width: 100%; }
 .cut.fadeOut { display: none; }
 .cut .clip { position: absolute; left: 0; top: 0; width: auto; height: 100%; width: 100%; background-size: 100% 100%; background-position: center; background-repeat: no-repeat; z-index: 100; pointer-events: none; }
+.cut .main li:hover p { display: inline-block; }
+.cut .main li img { position: relative; z-index: -1; }
+.cut .main li > div { position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto; top: 50%; margin-top: -15px; text-align: center; }
+.cut .main li > div p { display: none; padding: 5px 10px 7px; white-space: nowrap; background: #000; color: #fff; z-index: 10000; font-size: 14px; }
 
 #cut-1 { transform: perspective(150px) translateY(200px) translateZ(-200px); }
 #cut-1 .clip li:nth-child(1) { right: -53%; top: 0; width: 90%; min-width: 425px; z-index: 5; }
@@ -2322,7 +2326,7 @@ body { overflow: hidden; }
 #cut-1 .main li:nth-child(9) { width: 17%; top: 76%; left: 80%; }
 #cut-1 .main li:nth-child(10) { width: 52%; top: 17%; left: 34%; z-index: 5; }
 #cut-1 .main li:nth-child(11) { width: 18%; top: 10%; left: 72%; }
-#cut-1 .main li:nth-child(12) { width: 9%; top: 20%; left: 2.5%; }
+#cut-1 .main li:nth-child(12) { width: 9%; top: 20%; left: 2.5%; z-index: 10; }
 #cut-1 .main li:nth-child(13) { width: 13%; top: 47%; left: 21%; }
 #cut-1 .main li:nth-child(14) { width: 10%; top: 3%; left: 18%; }
 #cut-1 .main li:nth-child(15) { width: 17%; top: 4%; left: 29%; }
@@ -2339,18 +2343,20 @@ body { overflow: hidden; }
 #cut-2 .clip ul li:nth-child(4) { right: 29%; height: 44%; z-index: 2; bottom: -5%; }
 #cut-2 .clip ul li:nth-child(5) { right: 0%; height: 80%; z-index: 1; bottom: -6%; }
 #cut-2 .main { position: absolute; left: 0; top: 0; width: auto; height: 100%; width: 100%; cursor: pointer; z-index: 10; transform: perspective(150px) translateZ(-200px) translateX(-130%) translateY(560px); }
-#cut-2 .main li:nth-child(1) { left: 6%; top: 33%; width: 29%; z-index: 5; }
+#cut-2 .main li:nth-child(1) { left: 6%; top: 35%; width: 29%; z-index: 5; }
+#cut-2 .main li:nth-child(1) div { top: 100%; }
 #cut-2 .main li:nth-child(2) { top: 3%; left: 50.5%; width: 8.5%; z-index: 1; }
 #cut-2 .main li:nth-child(3) { width: 36%; top: 74%; left: 43%; z-index: 5; }
 #cut-2 .main li:nth-child(4) { width: 13%; top: 56%; left: 77%; z-index: 3; }
 #cut-2 .main li:nth-child(5) { width: 49%; top: 25%; left: 30%; z-index: 2; }
-#cut-2 .main li:nth-child(6) { width: 17%; top: 45%; left: 15%; z-index: 1; }
+#cut-2 .main li:nth-child(6) { width: 17%; top: 45%; left: 15%; z-index: 10; }
 #cut-2 .main li:nth-child(7) { width: 21%; top: 25%; left: 75%; }
-#cut-2 .main li:nth-child(8) { width: 13%; left: 5%; top: 18%; }
+#cut-2 .main li:nth-child(8) { width: 13%; left: 5%; top: 18%; z-index: 10; }
 #cut-2 .main li:nth-child(9) { width: 19%; top: 9%; left: 24%; z-index: 1; }
+#cut-2 .main li:nth-child(9) div { top: 25%; }
 #cut-2 .main li:nth-child(10) { width: 12%; top: 2%; left: 40%; }
 #cut-2 .main li:nth-child(11) { width: 19%; top: 5%; left: 62%; }
-#cut-2 .main li:nth-child(12) { width: 15%; top: 6%; left: 15%; }
+#cut-2 .main li:nth-child(12) { width: 15%; top: 6%; left: 15%; z-index: 10; }
 #cut-2 .main li:nth-child(13) { width: 13%; top: 47%; left: 21%; }
 #cut-2 .main li:nth-child(14) { width: 10%; top: 3%; left: 18%; }
 #cut-2 .main li:nth-child(15) { width: 17%; top: 4%; left: 29%; }
