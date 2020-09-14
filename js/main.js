@@ -1,8 +1,8 @@
-$(document).ready(function () {
+window.onbeforeunload = function () {
+    window.scrollTo(0, 1);
+}
 
-    window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-    }
+$(document).ready(function () {
 
     // Var
     const _scrollValue = 2500;
@@ -73,16 +73,6 @@ $(document).ready(function () {
     $(window).scroll(function (event) {
         const scroll = $(window).scrollTop();
 
-        // for (i = 0; i < $bg_li.length; i++) {
-
-        //     if (scroll > (i + .99) * _scrollValue) {
-        //         $bg_li.eq(i).addClass('fadeOut');
-        //     }
-        //     else {
-        //         $bg_li.eq(i).removeClass('fadeOut');
-        //     }
-        // }
-        console.log(scroll);
         if (scroll == 0){
             window.scrollTo(0,4*_scrollValue-35);
         }

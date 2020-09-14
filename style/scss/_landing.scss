@@ -329,9 +329,9 @@
             li {
                 width: auto;
                 height: auto;
-                cursor: pointer;
 
                 img {
+                    &.floating{cursor: pointer;}
                     position: relative;
                 }
                 p {

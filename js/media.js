@@ -2,6 +2,10 @@ $(document).ready(function () {
   const _scrollValue = 2500;
   const $videoContainer = $('.video-container');
   const $mainLi = $('.main li');
+  const $descriptionLi = $('.right-description li')
+  const $lightbox = $('.concert-lightbox');
+  const $removeBtn = $('.remove-btn');
+  const $iframe = $('.concert-lightbox iframe')
   var videoId = '';
 
   const _video = [
@@ -80,29 +84,31 @@ $(document).ready(function () {
       }
 
       else {
-        player.stopVideo();
+        closeMedia();
         $videoContainer.fadeOut(300);
-        if (music) {
-          music.pause();
-        }
-        if (voice) {
-          voice.pause();
-        }
       }
     }
     if (scroll > .9 * _scrollValue && scroll < .95 * _scrollValue) {
     }
 
     else {
-      player.stopVideo();
-      if (music) {
-        music.pause();
-      }
-      if (voice) {
-        voice.pause();
-      }
+      closeMedia();
     }
   });
+
+  function closeMedia() {
+    if (player) {
+      player.stopVideo();
+    }
+    $descriptionLi.css("opacity", 0).text('');
+    if (music) {
+      music.pause();
+    }
+    if (voice) {
+      voice.pause();
+    }
+  }
+
   onYouTubeIframeAPIReady();
   const $main_btn = $('.main li');
   function bindEvent() {
@@ -114,20 +120,32 @@ $(document).ready(function () {
           $videoContainer.fadeIn(300);
           videoId = _video[_key].url;
           player.loadVideoById(_video[_key].url);
+          $descriptionLi.eq(0).text("影像：" + _video[_key].name).css("opacity", 1);
           break;
       }
     });
   }
-
+  $removeBtn.click(function () {
+    $lightbox.fadeOut(300);
+    for (var i = 0; i < $iframe.length; i++) {
+      $iframe[i].src = $iframe[i].src; //causes a reload so it stops playing, music, video, etc.
+    }
+  });
   $main_btn.click(function () {
     const _type = $(this).attr('data-type');
     const _key = $(this).attr('data-key');
     switch (_type) {
+      case "concert":
+        closeMedia();
+        $lightbox.fadeIn(300);
+        $lightbox.find("li").fadeOut(100).eq(_key).fadeIn(300);
+        break;
       case "music":
         if (music) {
           music.pause();
         }
         music = new Audio(_music[_key].url);
+        $descriptionLi.eq(1).text("音樂：" + _music[_key].name).css("opacity", 1);
         music.play();
         break;
       case "voice":
@@ -135,6 +153,7 @@ $(document).ready(function () {
           voice.pause();
         }
         voice = new Audio(_voice[_key].url);
+        $descriptionLi.eq(2).text("旁白：" + _voice[_key].name).css("opacity", 1);
         voice.play();
         break;
     }
@@ -153,6 +172,9 @@ $(document).ready(function () {
         _title = _voice[_key].name;
         break;
       case "video":
+        _title = _video[_key].name;
+        break;
+      case "concert":
         _title = _video[_key].name;
         break;
     }
