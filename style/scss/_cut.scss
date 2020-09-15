@@ -43,34 +43,44 @@
     }
     .main {
         li {
-            &.floating{cursor: pointer;}
-            &:hover{
-                p{
-                    display: inline-block;
+            &.floating {
+                cursor: pointer;
+            }
+            &:hover {
+                >div {
+                    display: block;
                 }
             }
-            img{
-              
+            img {
                 position: relative;
                 z-index: -1;
             }
-            >div{
+            > div {
+                display: none;
                 position: absolute;
-                left:0;
-                    right:0;
-                    margin-left:auto;
-                    margin-right:auto;
-                    top: 50%;
-                    margin-top: -15px;
-                    text-align: center;
-                p {
-                    display: none;
-                    padding: 5px 10px 7px;
-                    white-space: nowrap;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                top: 50%;
+                margin-top: -15px;
+                text-align: center;
+                >div{
                     background: #000;
-                    color: #fff;
-                    z-index: 10000;
+                    padding: 7px 15px 9px;
+                    display: inline-block;
+                    span{
+                        color: #ccc;
+                        font-size: 12px;
+                        display: block;
+                    }
+                }
+                p {
+                    display: inline-block;
+                    white-space: nowrap;
+                    color: #eee;
                     font-size: 14px;
+                    margin: 0;
                 }
             }
         }

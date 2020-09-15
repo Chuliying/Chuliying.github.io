@@ -1,3 +1,4 @@
+// 每次loading回頂部
 window.onbeforeunload = function () {
     window.scrollTo(0, 1);
 }
@@ -20,14 +21,22 @@ $(document).ready(function () {
     const $videoContainer = $('.video-container');
     const _vh = $(window).height();
     const _vw = $(window).width();
+    const $mediaList = $('.media-list');
+    const $mediaListUl = $('.media-list ul');
+    const $listBtn = $('.list-btn');
+
+    $listBtn.click(function(){
+        $(this).toggleClass('show');
+        $('.media-list').toggleClass('active');
+    })
 
     // random function
     function random(min, max) {
         return (Math.random() * (max - min)) + min;
     }
 
-    const $scrollBody = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
     // 滾動function
+    const $scrollBody = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
     function bodyScrollTo(_p) {
         const _value = _scrollValue * _p + 150;
         $scrollBody.animate({
@@ -53,10 +62,11 @@ $(document).ready(function () {
             scrollTrigger: {
                 start: (i + .7) * _scrollValue,
                 end: (0.95 + i) * _scrollValue,
-                toggleClass: { targets: $(this), className: "active" }
+                toggleClass: { targets: $(this).add($mediaListUl[i]).add($listBtn), className: "active" },
             }
         });
     });
+
 
     // 背景觸發 
     $bg_li.each(function (i) {
@@ -73,8 +83,8 @@ $(document).ready(function () {
     $(window).scroll(function (event) {
         const scroll = $(window).scrollTop();
 
-        if (scroll == 0){
-            window.scrollTo(0,4*_scrollValue-35);
+        if (scroll == 0) {
+            window.scrollTo(0, 4 * _scrollValue - 35);
         }
 
         if (scroll == 4 * _scrollValue) {

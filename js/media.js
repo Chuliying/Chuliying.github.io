@@ -5,7 +5,8 @@ $(document).ready(function () {
   const $descriptionLi = $('.right-description li')
   const $lightbox = $('.concert-lightbox');
   const $removeBtn = $('.remove-btn');
-  const $iframe = $('.concert-lightbox iframe')
+  const $iframe = $('.concert-lightbox iframe');
+  const $listLi = $('.media-list ul li');
   var videoId = '';
 
   const _video = [
@@ -109,10 +110,21 @@ $(document).ready(function () {
     }
   }
 
+  function compareVisited(type, key) {
+    $listLi.each(function () {
+      const _type = $(this).attr('data-type');
+      const _key = $(this).attr('data-key');
+
+      if (_type === type && _key === key) {
+        $(this).addClass('visited');
+      }
+    })
+  }
+
   onYouTubeIframeAPIReady();
   const $main_btn = $('.main li');
   function bindEvent() {
-    $main_btn.click(function () {
+    $main_btn.add($listLi).click(function () {
       const _type = $(this).attr('data-type');
       const _key = $(this).attr('data-key');
       switch (_type) {
@@ -123,15 +135,16 @@ $(document).ready(function () {
           $descriptionLi.eq(0).text("影像：" + _video[_key].name).css("opacity", 1);
           break;
       }
+      compareVisited(_type, _key);
     });
   }
   $removeBtn.click(function () {
     $lightbox.fadeOut(300);
     for (var i = 0; i < $iframe.length; i++) {
-      $iframe[i].src = $iframe[i].src; //causes a reload so it stops playing, music, video, etc.
+      $iframe[i].src = $iframe[i].src;
     }
   });
-  $main_btn.click(function () {
+  $main_btn.add($listLi).click(function () {
     const _type = $(this).attr('data-type');
     const _key = $(this).attr('data-key');
     switch (_type) {
@@ -157,10 +170,11 @@ $(document).ready(function () {
         voice.play();
         break;
     }
+    compareVisited(_type, _key);  
   });
 
 
-  $mainLi.each(function () {
+  $mainLi.add($listLi).each(function () {
     const _type = $(this).attr('data-type');
     const _key = $(this).attr('data-key');
     let _title = "";
@@ -179,8 +193,7 @@ $(document).ready(function () {
         break;
     }
     if (_type) {
-      $(this).append("<div><p>" + _type + "<br>" + _title + "</p></div>");
-
+      $(this).append("<div><div><span>" + _type + "</span><p>" + _title + "</p></div></div>");
     }
   });
 

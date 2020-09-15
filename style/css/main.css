@@ -2199,8 +2199,15 @@ body { overflow: hidden; }
 .footer .right-description ul { text-align: right; }
 .footer .right-description li { display: table; opacity: 0; transition: opacity 0.5s; margin-right: 0; margin-left: auto; background: #000; padding: 5px 10px; margin-top: 10px; font-size: 14px; letter-spacing: 0.5px; line-height: 1.5em; color: #fff; height: 32px; }
 .footer .left-list { position: absolute; left: 25px; bottom: 0; }
-.footer .left-list .list-btn { display: inline-block; background: #000; padding: 15px; color: #eee; cursor: pointer; line-height: 1.5em; vertical-align: top; }
-.footer .left-list .list-btn.active { background: #555; }
+.footer .left-list .media-list ul { display: none; position: absolute; bottom: 60px; left: 25px; max-height: 350px; width: 200px; overflow: auto; }
+.footer .left-list .media-list ul li { padding: 3px 25px; background: #000; border-bottom: dashed 1px #aaa; cursor: pointer; }
+.footer .left-list .media-list ul li.visited { background: #333; }
+.footer .left-list .media-list ul li span { font-size: 12px; margin-bottom: 3px; color: #ccc; }
+.footer .left-list .media-list ul li p { color: #eee; font-size: 16px; line-height: 1.45em; margin: 0px auto 7px; }
+.footer .left-list .media-list.active ul.active { display: block; }
+.footer .left-list .list-btn { position: absolute; bottom: 0; left: 25px; display: none; background: #000; padding: 15px; color: #eee; cursor: pointer; opacity: 0.75; transition: opacity 0.5s; }
+.footer .left-list .list-btn.active { display: inline-block; }
+.footer .left-list .list-btn.show { opacity: 1; }
 .footer .left-list .list-btn svg { width: 25px; fill: #eee; }
 
 #cut-landing { z-index: 100; max-width: 1024px; margin: auto; height: 80vh; margin-top: 12vh; text-align: center; position: relative; transform: perspective(150px) translateZ(0px); }
@@ -2313,10 +2320,12 @@ body { overflow: hidden; }
 .cut.fadeOut { display: none; }
 .cut .clip { position: absolute; left: 0; top: 0; width: auto; height: 100%; width: 100%; background-size: 100% 100%; background-position: center; background-repeat: no-repeat; z-index: 100; pointer-events: none; }
 .cut .main li.floating { cursor: pointer; }
-.cut .main li:hover p { display: inline-block; }
+.cut .main li:hover > div { display: block; }
 .cut .main li img { position: relative; z-index: -1; }
-.cut .main li > div { position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto; top: 50%; margin-top: -15px; text-align: center; }
-.cut .main li > div p { display: none; padding: 5px 10px 7px; white-space: nowrap; background: #000; color: #fff; z-index: 10000; font-size: 14px; }
+.cut .main li > div { display: none; position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto; top: 50%; margin-top: -15px; text-align: center; }
+.cut .main li > div > div { background: #000; padding: 7px 15px 9px; display: inline-block; }
+.cut .main li > div > div span { color: #ccc; font-size: 12px; display: block; }
+.cut .main li > div p { display: inline-block; white-space: nowrap; color: #eee; font-size: 14px; margin: 0; }
 
 #cut-1 { transform: perspective(150px) translateY(200px) translateZ(-200px); }
 #cut-1 .clip li:nth-child(1) { right: -53%; top: 0; width: 90%; min-width: 425px; z-index: 5; }
