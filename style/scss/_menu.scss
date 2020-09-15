@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Basic&display=swap');
+
 .menu{
   position: fixed;
   top: 0;
@@ -9,7 +11,7 @@
   //background-repeat: no-repeat;
   background-size: contain;
   display: none;
-  padding: 80px 45px;
+  padding: 60px 45px;
   .main-share{
     display: flex;
     flex-wrap: wrap;
@@ -25,12 +27,11 @@
         }
         
         h5{
-          font-weight: bold;
-          font-size: 24px;
-          margin: 25px auto 60px;
-          font-family: 'Libre Caslon Display', serif;
-          letter-spacing: .35em;
-          color: #eee;
+          font-size: 29px;
+          margin: 5px auto 75px;
+          font-family: 'Gentium Basic', serif;
+          font-weight: normal;
+          color: #000;
         
         }
       }
@@ -41,15 +42,24 @@
     font-family: 'Libre Caslon Display', serif;
     color: #ccc;
     padding: 60px 45px;
-    text-align: right;
     h5{
       font-size: 18px;
       letter-spacing: 1.5px;
     }
     ul{
       margin-top: 25px;
+      display: flex;
       li{
-        line-height: 1.75em;
+        display: inline-block;
+        line-height: 1.55em;
+        font-size: 14px;
+        color: #eee;
+        &:first-child{
+          width: 420px;
+        }
+        &:last-child{
+          flex: 1;
+        }
       }
     }
   }
