@@ -24,6 +24,7 @@ $(document).ready(function () {
     const $mediaList = $('.media-list');
     const $mediaListUl = $('.media-list ul');
     const $listBtn = $('.list-btn');
+    const $lightbox = $('.concert-lightbox');
 
     $listBtn.click(function () {
         $(this).toggleClass('show');
@@ -119,7 +120,7 @@ $(document).ready(function () {
 
     $body.imagesLoaded(function () {
         const _paddingTopValue = ($(window).height() - $(window).width()*0.416 ) / 2;
-  
+        console.log(_paddingTopValue);
         $lightbox.find('ul').css("padding-top",_paddingTopValue);
         $wrapper.fadeIn(500);
         $('.loading').fadeOut(500);
