@@ -152,9 +152,24 @@ $(document).ready(function () {
     const _key = $(this).attr('data-key');
     switch (_type) {
       case "concert":
+        let key;
+        if (_key == 0) {
+          key = 0
+        }
+        if (_key == 7) {
+          key = 1
+        }
+
+        if (_key == 11) {
+          key = 2
+        }
+
+        if (_key == 18) {
+          key = 3
+        }
         closeMedia();
         $lightbox.fadeIn(300);
-        $lightbox.find("li").fadeOut(100).eq(_key).fadeIn(300);
+        $lightbox.find("li").fadeOut(100).eq(key).fadeIn(300);
         break;
       case "music":
         if (music) {
