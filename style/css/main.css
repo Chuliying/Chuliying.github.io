@@ -2275,15 +2275,15 @@ body { overflow: hidden; }
 #cut-landing .bg-items .layer-8 { transform: perspective(150px) translateZ(-900px); }
 #cut-landing .bg-items .layer-8 img { top: -10%; left: 15%; width: 100%; }
 
-.menu { position: fixed; top: 0; left: 0; height: 100%; width: 100%; background-image: url("../../images/menu-bg.jpg"); z-index: 10000; background-size: contain; display: none; padding: 60px 45px; }
+.menu { position: fixed; top: 0; left: 0; height: 100%; width: 100%; background-image: url("../../images/menu-bg.jpg"); z-index: 10000; background-size: 100% 100%; display: none; padding: 60px 45px; }
 .menu .main-share { display: flex; flex-wrap: wrap; }
 .menu .main-share > li { width: 33.333333%; text-align: center; }
-.menu .main-share > li div img { margin: 120px auto 25px; height: 250px; width: 250px; border-radius: 100%; }
+.menu .main-share > li div img { margin: 10vh auto 25px; height: 250px; width: 250px; border-radius: 100%; }
 .menu .main-share > li div h5 { font-size: 29px; margin: 5px auto 75px; font-family: 'Gentium Basic', serif; font-weight: normal; color: #000; }
 .menu .copyright { font-family: 'Libre Caslon Display', serif; color: #ccc; padding: 60px 45px; }
 .menu .copyright h5 { font-size: 18px; letter-spacing: 1.5px; }
 .menu .copyright ul { margin-top: 25px; display: flex; }
-.menu .copyright ul li { display: inline-block; line-height: 1.55em; font-size: 14px; color: #eee; }
+.menu .copyright ul li { display: inline-block; line-height: 1.65em; font-size: 14px; color: #eee; }
 .menu .copyright ul li:first-child { width: 420px; }
 .menu .copyright ul li:last-child { flex: 1; }
 .menu hr { border: none; border-top: dashed 1px #aaa; }

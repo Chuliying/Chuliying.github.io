@@ -9,7 +9,7 @@
   background-image: url('../../images/menu-bg.jpg');
   z-index: 10000;
   //background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
   display: none;
   padding: 60px 45px;
   .main-share{
@@ -20,7 +20,7 @@
       text-align: center;
       div{
         img{
-          margin: 120px auto 25px;
+          margin: 10vh auto 25px;
           height: 250px;
           width: 250px;
           border-radius: 100%;
@@ -51,7 +51,7 @@
       display: flex;
       li{
         display: inline-block;
-        line-height: 1.55em;
+        line-height: 1.65em;
         font-size: 14px;
         color: #eee;
         &:first-child{
