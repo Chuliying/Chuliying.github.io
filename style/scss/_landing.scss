@@ -325,52 +325,69 @@
         .layer-7 {
             top: -5vh;
             z-index: 4;
-            transform: perspective(150px) translateZ(-800px) scale(0.55);
+            transform: perspective(150px) translateZ(-800px);
             li {
                 width: auto;
                 height: auto;
 
                 img {
-                    &.floating{cursor: pointer;}
+                    &.floating {
+                        cursor: pointer;
+                    }
                     position: relative;
                 }
                 p {
                     color: #ccc;
                     background: #000;
-                    padding: 15px 25px;
+                    padding: 10px 15px;
                     position: absolute;
                     display: inline-block;
-                    font-size: 32px;
+                    font-size: 16px;
                     opacity: 0;
                     width: 1em;
                     box-sizing: content-box;
                 }
                 &:nth-child(1) {
-                    bottom: 70%;
-                    left: -20%;
+                    top: 24%;
+                    left: 18%;
+                    img{
+                        width:300px;
+                    }
                 }
                 &:nth-child(2) {
                     top: 72%;
-                    right: -49%;
+                    left: 46%;
+                    img{
+                        width: 300px;
+                    }
                 }
                 &:nth-child(3) {
-                    top: 17%;
-                    left: 94%;
+                    top: 29%;
+                    left: 72%;
+                    img{
+                        width: 300px;
+                    }
                 }
                 &:nth-child(4) {
-                    top: -54%;
-                    right: 5%;
+                    top: -12%;
+                    left: 41%;
+                    img{
+                        width: 270px;
+                    }
                 }
                 &:nth-child(5) {
-                    top: 72%;
-                    left: 7%;
+                    top: 66%;
+                    left: 20%;
+                    img{
+                        width: 270px;
+                    }
                 }
             }
         }
 
         .layer-8 {
             transform: perspective(150px) translateZ(-900px);
-            img {   
+            img {
                 top: -10%;
                 left: 15%;
                 width: 100%;

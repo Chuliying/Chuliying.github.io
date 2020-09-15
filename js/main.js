@@ -25,7 +25,7 @@ $(document).ready(function () {
     const $mediaListUl = $('.media-list ul');
     const $listBtn = $('.list-btn');
 
-    $listBtn.click(function(){
+    $listBtn.click(function () {
         $(this).toggleClass('show');
         $('.media-list').toggleClass('active');
     })
@@ -45,16 +45,16 @@ $(document).ready(function () {
     }
 
     //FLOATING ITEM
-    const $floatingImg = $('.layer-7 img, .floating img');
-    $floatingImg.each(function (i) {
-        gsap.to($(this), 5, {
-            y: random(-15, 15),
-            rotation: random(-7, 7),
-            yoyo: true,
-            ease: 'none',
-            repeat: -1
-        });
-    });
+    // const $floatingImg = $('.layer-7 img, .floating img');
+    // $floatingImg.each(function (i) {
+    //     gsap.to($(this), 5, {
+    //         y: random(-15, 15),
+    //         rotation: random(-7, 7),
+    //         yoyo: true,
+    //         ease: 'none',
+    //         repeat: -1
+    //     });
+    // });
 
     // cut active controll
     $cut.each(function (i) {
@@ -101,7 +101,9 @@ $(document).ready(function () {
         $menu.fadeToggle(500);
     })
 
+
     // landing page
+    const $wrapper = $('.wrapper');
     const $cutLanding = $('#cut-landing');
     const $mainLogo = $('.main-logo');
     const $layer = $('.bg-items .layer');
@@ -114,53 +116,59 @@ $(document).ready(function () {
     // image loaded then
 
     $body.imagesLoaded(function () {
-        $('.wrapper').fadeIn(500);
+        $wrapper.fadeIn(500);
         $('.loading').fadeOut(500);
-        // LANDING CUT
-        // show landing cut
-        $cutLanding.fadeIn(1500);
-        $mainLogo.fadeIn(1500);
+        const _visited = localStorage.getItem('visited');
+        if (!_visited) {
+            // LANDING CUT
+            // show landing cut
+            $mainLogo.fadeIn(1500);
 
-        setTimeout(function () {
-            $cutLanding.addClass('show');
-        }, 550);
+            setTimeout(function () {
+                $cutLanding.addClass('show');
+            }, 550);
 
-        setTimeout(function () {
-            $mainLogo.fadeOut(1500);
-        }, 2000);
+            setTimeout(function () {
+                $mainLogo.fadeOut(1500);
+            }, 2000);
 
-        gsap.fromTo($bgItem, { autoAlpha: 0, y: 120 }, { autoAlpha: 1, y: 0, duration: 3 });
-        gsap.to($header.add($itemTitle), 1, {
-            autoAlpha: 1,
-            delay: 5
-        });
-
-        $layer.each(function (i) {
-            gsap.to($(this), 3, {
-                z: 150,
-                rotation: random(-10, 10),
-                ease: 'none',
-                delay: 2.05 + 0.05 * i
+            gsap.fromTo($bgItem, { autoAlpha: 0, y: 120 }, { autoAlpha: 1, y: 0, duration: 3 });
+            gsap.to($header.add($itemTitle), 1, {
+                autoAlpha: 1,
+                delay: 5
             });
-        })
 
-        gsap.to($('.layer-7'), 3, {
-            z: -25,
-            ease: 'none',
-            delay: 2.15
-        });
+            $layer.each(function (i) {
+                gsap.to($(this), 3, {
+                    z: 150,
+                    rotation: random(-10, 10),
+                    ease: 'none',
+                    delay: 2.05 + 0.05 * i
+                });
+            })
 
-        gsap.to($('.layer-8'), 3, {
-            z: -30,
-            ease: 'none',
-            delay: 2.165
-        });
+            gsap.to($('.layer-7'), 3, {
+                z: -25,
+                ease: 'none',
+                delay: 2.15
+            });
+
+            gsap.to($('.layer-8'), 3, {
+                z: -25,
+                ease: 'none',
+                delay: 2.165
+            });
+        }
+        else{
+            $wrapper.addClass('visited');
+        }
 
         // 轉場
         $landingBtn.click(function () {
             const _key = $(this).attr('key');
             $body.css('overflow', 'auto');
             bodyScrollTo(_key);
+            localStorage.setItem('visited', true);
 
             gsap.to($cutLanding.add($bg_0), 1, {
                 z: 150,

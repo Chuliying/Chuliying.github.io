@@ -23,6 +23,34 @@ body {
   width: 100%;
   top: 0;
   left: 0;
+  &.visited {
+    .header {
+      opacity: 1;
+    }
+    #cut-landing {
+      .island {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+      .bg-items {
+        opacity: 1;
+        > li {
+          display: none;
+          p{
+            opacity: 1;
+          }
+        }
+        .layer-7 {
+          display: block;
+          transform: perspective(150px) translateZ(-25px);
+        }
+        .layer-8 {
+          display: block;
+          transform: perspective(150px) translateZ(-25px);
+        }
+      }
+    }
+  }
 }
 
 .header {
@@ -333,10 +361,10 @@ body {
           background: #000;
           border-bottom: dashed 1px #aaa;
           cursor: pointer;
-          &.visited{
+          &.visited {
             background: #333;
           }
-          span{
+          span {
             font-size: 12px;
             margin-bottom: 3px;
             color: #ccc;
