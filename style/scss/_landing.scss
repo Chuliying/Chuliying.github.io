@@ -350,61 +350,57 @@
                 &:nth-child(1) {
                     top: 24%;
                     left: 18%;
-                    img{
-                        width:300px;
-                        @media (max-width:1280px) {
-                            width:250px;
+                    img {
+                        width: 300px;
+                        @media (max-width: 1280px) {
+                            width: 250px;
                         }
                     }
-                    p{
-                        @media (max-width:1280px) {
-                            left: -35px;
-                        }
+                    p {
+                        left: -35px;
                     }
                 }
                 &:nth-child(2) {
                     top: 72%;
                     left: 46%;
-                    img{
+                    img {
                         width: 300px;
-                        @media (max-width:1280px) {
-                            width:250px;
+                        @media (max-width: 1280px) {
+                            width: 250px;
                         }
                     }
                 }
                 &:nth-child(3) {
                     top: 29%;
                     left: 72%;
-                    img{
+                    img {
                         width: 300px;
-                        @media (max-width:1280px) {
-                            width:250px;
+                        @media (max-width: 1280px) {
+                            width: 250px;
                         }
                     }
                 }
                 &:nth-child(4) {
                     top: -12%;
                     left: 41%;
-                    img{
+                    img {
                         width: 270px;
-                        @media (max-width:1280px) {
-                            width:230px;
+                        @media (max-width: 1280px) {
+                            width: 230px;
                         }
                     }
                 }
                 &:nth-child(5) {
                     top: 66%;
                     left: 20%;
-                    img{
+                    img {
                         width: 270px;
-                        @media (max-width:1280px) {
-                            width:230px;
+                        @media (max-width: 1280px) {
+                            width: 230px;
                         }
                     }
-                    p{
-                        @media (max-width:1280px) {
-                            left: -35px;
-                        }
+                    p {
+                        left: -35px;
                     }
                 }
             }

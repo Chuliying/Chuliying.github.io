@@ -2277,7 +2277,7 @@ body { overflow: hidden; }
 #cut-landing .bg-items .layer-7 li:nth-child(1) { top: 24%; left: 18%; }
 #cut-landing .bg-items .layer-7 li:nth-child(1) img { width: 300px; }
 @media (max-width: 1280px) { #cut-landing .bg-items .layer-7 li:nth-child(1) img { width: 250px; } }
-@media (max-width: 1280px) { #cut-landing .bg-items .layer-7 li:nth-child(1) p { left: -35px; } }
+#cut-landing .bg-items .layer-7 li:nth-child(1) p { left: -35px; }
 #cut-landing .bg-items .layer-7 li:nth-child(2) { top: 72%; left: 46%; }
 #cut-landing .bg-items .layer-7 li:nth-child(2) img { width: 300px; }
 @media (max-width: 1280px) { #cut-landing .bg-items .layer-7 li:nth-child(2) img { width: 250px; } }
@@ -2290,7 +2290,7 @@ body { overflow: hidden; }
 #cut-landing .bg-items .layer-7 li:nth-child(5) { top: 66%; left: 20%; }
 #cut-landing .bg-items .layer-7 li:nth-child(5) img { width: 270px; }
 @media (max-width: 1280px) { #cut-landing .bg-items .layer-7 li:nth-child(5) img { width: 230px; } }
-@media (max-width: 1280px) { #cut-landing .bg-items .layer-7 li:nth-child(5) p { left: -35px; } }
+#cut-landing .bg-items .layer-7 li:nth-child(5) p { left: -35px; }
 #cut-landing .bg-items .layer-8 { transform: perspective(150px) translateZ(-900px); }
 #cut-landing .bg-items .layer-8 img { top: -10%; left: 15%; width: 100%; }
 
