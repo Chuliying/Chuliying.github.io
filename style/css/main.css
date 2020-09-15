@@ -2206,17 +2206,18 @@ body { overflow: hidden; }
 .footer .right-description ul { text-align: right; }
 .footer .right-description li { display: table; opacity: 0; transition: opacity 0.5s; margin-right: 0; margin-left: auto; background: #000; padding: 5px 10px; margin-top: 10px; font-size: 14px; letter-spacing: 0.5px; line-height: 1.5em; color: #fff; height: 32px; }
 .footer .left-list { position: absolute; left: 25px; bottom: 0; }
-.footer .left-list .media-list ul { display: none; position: absolute; bottom: 60px; left: 25px; max-height: 350px; width: 200px; overflow: auto; background: #000; }
+.footer .left-list .media-list ul { display: none; position: absolute; bottom: 57px; left: 25px; max-height: 350px; width: 200px; overflow: auto; background: #000; }
 .footer .left-list .media-list ul h5 { padding-left: 25px; color: #fff; }
 .footer .left-list .media-list ul li { padding: 3px 25px; border-bottom: dashed 1px #aaa; cursor: pointer; }
 .footer .left-list .media-list ul li.visited { background: #333; }
 .footer .left-list .media-list ul li span { font-size: 12px; margin-bottom: 3px; color: #ccc; }
 .footer .left-list .media-list ul li p { color: #eee; font-size: 16px; line-height: 1.45em; margin: 0px auto 7px; }
 .footer .left-list .media-list.active ul.active { display: block; }
-.footer .left-list .list-btn { position: absolute; bottom: 0; left: 25px; display: none; background: #000; padding: 15px; color: #eee; cursor: pointer; opacity: 0.75; transition: opacity 0.5s; }
+.footer .left-list .list-btn { position: absolute; bottom: 0; left: 25px; display: none; background: #000; padding: 15px; color: #eee; cursor: pointer; opacity: 0.75; transition: opacity 0.5s; white-space: nowrap; }
 .footer .left-list .list-btn.active { display: inline-block; }
 .footer .left-list .list-btn.show { opacity: 1; }
-.footer .left-list .list-btn svg { width: 25px; fill: #eee; }
+.footer .left-list .list-btn svg { width: 25px; fill: #eee; vertical-align: middle; }
+.footer .left-list .list-btn p { margin: 0; margin-left: 5px; line-height: 25px; display: inline-block; vertical-align: middle; }
 
 .location { position: absolute; right: 25px; bottom: 25px; }
 .location li { background: #000; padding: 5px 10px; margin-top: 10px; font-size: 14px; letter-spacing: 0.5px; line-height: 1.5em; color: #fff; height: 32px; display: none; }
