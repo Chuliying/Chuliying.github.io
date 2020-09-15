@@ -38,7 +38,9 @@ $(document).ready(function () {
     // 滾動function
     const $scrollBody = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
     function bodyScrollTo(_p) {
-        const _value = _scrollValue * _p + 150;
+        const _keyValue = parseInt(_p)+0.75;
+        const _value = _scrollValue * _keyValue;
+        console.log(_p , _keyValue);
         $scrollBody.animate({
             scrollTop: _value
         }, 1000);
