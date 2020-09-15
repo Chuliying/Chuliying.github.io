@@ -41,7 +41,6 @@ $(document).ready(function () {
     function bodyScrollTo(_p) {
         const _keyValue = parseInt(_p)+0.75;
         const _value = _scrollValue * _keyValue;
-        console.log(_p , _keyValue);
         $scrollBody.animate({
             scrollTop: _value
         }, 1000);
@@ -120,7 +119,6 @@ $(document).ready(function () {
 
     $body.imagesLoaded(function () {
         const _paddingTopValue = ($(window).height() - $(window).width()*0.416 ) / 2;
-        console.log(_paddingTopValue);
         $lightbox.find('ul').css("padding-top",_paddingTopValue);
         $wrapper.fadeIn(500);
         $('.loading').fadeOut(500);
