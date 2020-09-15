@@ -148,22 +148,16 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    padding: 10%;
     li {
       position: relative;
+      width: 80%;
+      margin: 0 auto;
       .video-responsive {
         position: relative;
         padding-bottom: 52%;
-        padding-top: 30px;
         height: 0;
         overflow: hidden;
-
-        @media (max-width: 1280px) and (min-width: 1024px) {
-          max-width: 980px;
-          margin: 0 auto;
-          padding-bottom: 48.25%;
-        }
-
+        margin: 0;
         iframe,
         object,
         embed {

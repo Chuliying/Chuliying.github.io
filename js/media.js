@@ -8,6 +8,9 @@ $(document).ready(function () {
   const $iframe = $('.concert-lightbox iframe');
   const $listLi = $('.media-list ul li');
   var videoId = '';
+  const _paddingTopValue = ($(window).height() - $(window).width()*0.416 ) / 2;
+  
+  $lightbox.find('ul').css("padding-top",_paddingTopValue);
 
   const _video = [
     { name: "金瓜石音樂會", url: "zT3fWaDvhL4" },
