@@ -25,6 +25,7 @@ $(document).ready(function () {
     const $mediaListUl = $('.media-list ul');
     const $listBtn = $('.list-btn');
     const $lightbox = $('.concert-lightbox');
+    const $locationLi = $('.location li');
 
     $listBtn.click(function () {
         $(this).toggleClass('show');
@@ -64,7 +65,7 @@ $(document).ready(function () {
             scrollTrigger: {
                 start: (i + .7) * _scrollValue,
                 end: (0.95 + i) * _scrollValue,
-                toggleClass: { targets: $(this).add($mediaListUl[i]).add($listBtn), className: "active" },
+                toggleClass: { targets: $(this).add($mediaListUl[i]).add($listBtn).add($locationLi[i]), className: "active" },
             }
         });
     });

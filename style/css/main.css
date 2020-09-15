@@ -2202,7 +2202,7 @@ body { overflow: hidden; }
 @keyframes blur-text { 0% { -webkit-filter: blur(0px); filter: blur(0px); }
   100% { -webkit-filter: blur(4px); filter: blur(4px); } }
 .footer { position: fixed; bottom: 25px; width: 100%; }
-.footer .right-description { position: absolute; right: 25px; bottom: 0; }
+.footer .right-description { position: absolute; right: 25px; bottom: 45px; }
 .footer .right-description ul { text-align: right; }
 .footer .right-description li { display: table; opacity: 0; transition: opacity 0.5s; margin-right: 0; margin-left: auto; background: #000; padding: 5px 10px; margin-top: 10px; font-size: 14px; letter-spacing: 0.5px; line-height: 1.5em; color: #fff; height: 32px; }
 .footer .left-list { position: absolute; left: 25px; bottom: 0; }
@@ -2217,6 +2217,10 @@ body { overflow: hidden; }
 .footer .left-list .list-btn.active { display: inline-block; }
 .footer .left-list .list-btn.show { opacity: 1; }
 .footer .left-list .list-btn svg { width: 25px; fill: #eee; }
+
+.location { position: absolute; right: 25px; bottom: 25px; }
+.location li { background: #000; padding: 5px 10px; margin-top: 10px; font-size: 14px; letter-spacing: 0.5px; line-height: 1.5em; color: #fff; height: 32px; display: none; }
+.location li.active { display: inline-block; }
 
 #cut-landing { z-index: 100; max-width: 1024px; margin: auto; height: 80vh; margin-top: 12vh; text-align: center; position: relative; transform: perspective(150px) translateZ(0px); }
 #cut-landing.show .island { opacity: 1; transform: translateY(0px); }
