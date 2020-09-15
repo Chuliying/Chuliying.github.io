@@ -118,6 +118,9 @@ $(document).ready(function () {
     // image loaded then
 
     $body.imagesLoaded(function () {
+        const _paddingTopValue = ($(window).height() - $(window).width()*0.416 ) / 2;
+  
+        $lightbox.find('ul').css("padding-top",_paddingTopValue);
         $wrapper.fadeIn(500);
         $('.loading').fadeOut(500);
         const _visited = localStorage.getItem('visited');
