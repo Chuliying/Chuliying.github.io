@@ -45,16 +45,16 @@ $(document).ready(function () {
     }
 
     //FLOATING ITEM
-    // const $floatingImg = $('.layer-7 img, .floating img');
-    // $floatingImg.each(function (i) {
-    //     gsap.to($(this), 5, {
-    //         y: random(-15, 15),
-    //         rotation: random(-7, 7),
-    //         yoyo: true,
-    //         ease: 'none',
-    //         repeat: -1
-    //     });
-    // });
+    const $floatingImg = $('.layer-7 img, .floating img');
+    $floatingImg.each(function (i) {
+        gsap.to($(this), 5, {
+            y: random(-15, 15),
+            rotation: random(-7, 7),
+            yoyo: true,
+            ease: 'none',
+            repeat: -1
+        });
+    });
 
     // cut active controll
     $cut.each(function (i) {
