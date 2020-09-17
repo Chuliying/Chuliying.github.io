@@ -15,6 +15,7 @@
   .main-share{
     display: flex;
     flex-wrap: wrap;
+    height: 55%;
     >li{
       width: 33.333333%;
       text-align: center;
@@ -31,7 +32,7 @@
           margin: 5px auto 75px;
           font-family: 'Gentium Basic', serif;
           font-weight: normal;
-          color: #000;
+          color: #ccc;
         
         }
       }
@@ -42,20 +43,25 @@
     font-family: 'Libre Caslon Display', serif;
     color: #ccc;
     padding: 60px 45px;
+    position: absolute;
+    top: 52%;
+    height: 40%;
     h5{
       font-size: 18px;
       letter-spacing: 1.5px;
     }
     ul{
+      margin: auto;
       margin-top: 25px;
       display: flex;
+      
       li{
         display: inline-block;
         line-height: 1.65em;
         font-size: 14px;
         color: #eee;
         &:first-child{
-          width: 420px;
+          width: 33%;
         }
         &:last-child{
           flex: 1;
