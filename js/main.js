@@ -4,7 +4,6 @@ window.onbeforeunload = function () {
 }
 
 $(document).ready(function () {
-
     // Var
     const _scrollValue = 2500;
     const $bg_li = $('.bg li')
@@ -29,7 +28,7 @@ $(document).ready(function () {
 
     $listBtn.click(function () {
         $(this).toggleClass('show');
-        $('.media-list').toggleClass('active');
+        $mediaList.toggleClass('active');
     })
 
     // random function
@@ -40,7 +39,7 @@ $(document).ready(function () {
     // 滾動function
     const $scrollBody = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
     function bodyScrollTo(_p) {
-        const _keyValue = parseInt(_p)+0.75;
+        const _keyValue = parseInt(_p) + 0.75;
         const _value = _scrollValue * _keyValue;
         $scrollBody.animate({
             scrollTop: _value
@@ -85,12 +84,12 @@ $(document).ready(function () {
 
     $(window).scroll(function (event) {
         const scroll = $(window).scrollTop();
-
+        console.log(scroll, 3.97*_scrollValue);
         if (scroll == 0) {
             window.scrollTo(0, 4 * _scrollValue - 35);
         }
 
-        if (scroll == 4 * _scrollValue) {
+        if (scroll > 3.99 * _scrollValue ) {
             window.scrollTo(0, 5);
 
         }
@@ -103,7 +102,6 @@ $(document).ready(function () {
         $(this).toggleClass('open');
         $menu.fadeToggle(500);
     })
-
 
     // landing page
     const $wrapper = $('.wrapper');
@@ -119,8 +117,8 @@ $(document).ready(function () {
     // image loaded then
 
     $body.imagesLoaded(function () {
-        const _paddingTopValue = ($(window).height() - $(window).width()*0.416 ) / 2;
-        $lightbox.find('ul').css("padding-top",_paddingTopValue);
+        const _paddingTopValue = ($(window).height() - $(window).width() * 0.416) / 2;
+        $lightbox.find('ul').css("padding-top", _paddingTopValue);
         $wrapper.fadeIn(500);
         $('.loading').fadeOut(500);
         const _visited = localStorage.getItem('visited');
@@ -164,7 +162,7 @@ $(document).ready(function () {
                 delay: 2.165
             });
         }
-        else{
+        else {
             $wrapper.addClass('visited');
         }
 
