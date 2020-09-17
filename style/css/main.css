@@ -2295,7 +2295,6 @@ body { overflow: hidden; }
 #cut-landing .bg-items .layer-7 li:nth-child(5) { top: 66%; left: 20%; }
 #cut-landing .bg-items .layer-7 li:nth-child(5) img { width: 270px; }
 @media (max-width: 1280px) { #cut-landing .bg-items .layer-7 li:nth-child(5) img { width: 230px; } }
-#cut-landing .bg-items .layer-7 li:nth-child(5) p { left: -35px; }
 #cut-landing .bg-items .layer-8 { transform: perspective(150px) translateZ(-900px); }
 #cut-landing .bg-items .layer-8 img { top: -10%; left: 15%; width: 100%; }
 
@@ -2401,7 +2400,7 @@ body { overflow: hidden; }
 #cut-2 .main { position: absolute; left: 0; top: 0; width: auto; height: 100%; width: 100%; z-index: 10; transform: perspective(150px) translateZ(-200px) translateX(-130%) translateY(560px); }
 #cut-2 .main li:nth-child(1) { left: 6%; top: 35%; width: 29%; z-index: 5; }
 #cut-2 .main li:nth-child(1) div { top: 100%; }
-#cut-2 .main li:nth-child(2) { top: 3%; left: 50.5%; width: 8.5%; z-index: 1; }
+#cut-2 .main li:nth-child(2) { top: 3%; left: 52.5%; width: 8.5%; z-index: 1; }
 #cut-2 .main li:nth-child(3) { width: 36%; top: 74%; left: 43%; z-index: 5; }
 #cut-2 .main li:nth-child(4) { width: 13%; top: 56%; left: 77%; z-index: 3; }
 #cut-2 .main li:nth-child(5) { width: 49%; top: 25%; left: 30%; z-index: 2; }
@@ -2410,7 +2409,7 @@ body { overflow: hidden; }
 #cut-2 .main li:nth-child(8) { width: 13%; left: 5%; top: 18%; z-index: 10; }
 #cut-2 .main li:nth-child(9) { width: 19%; top: 9%; left: 24%; z-index: 1; }
 #cut-2 .main li:nth-child(9) div { top: 25%; }
-#cut-2 .main li:nth-child(10) { width: 12%; top: 2%; left: 40%; }
+#cut-2 .main li:nth-child(10) { width: 12%; top: 2%; left: 41%; }
 #cut-2 .main li:nth-child(11) { width: 19%; top: 5%; left: 62%; }
 #cut-2 .main li:nth-child(12) { width: 15%; top: 6%; left: 15%; z-index: 10; }
 #cut-2 .main li:nth-child(13) { width: 13%; top: 47%; left: 21%; }
@@ -2429,7 +2428,7 @@ body { overflow: hidden; }
 #cut-3 .clip ul li:nth-child(4) { left: 0; height: 35%; bottom: 15%; z-index: 2; }
 #cut-3 .clip ul li:nth-child(5) { left: 10%; height: 57%; z-index: 1; bottom: 15%; }
 #cut-3 .main { position: absolute; left: 0; top: 0; width: auto; height: 100%; width: 100%; transform: perspective(150px) translateZ(-200px) translateY(2000px); z-index: 10; }
-#cut-3 .main li:nth-child(1) { left: 77%; top: 38%; width: 17%; z-index: 3; }
+#cut-3 .main li:nth-child(1) { left: 79%; top: 38%; width: 17%; z-index: 3; }
 #cut-3 .main li:nth-child(2) { top: 63%; left: 70%; width: 18.5%; z-index: 7; }
 #cut-3 .main li:nth-child(3) { width: 12%; top: 30%; left: 3%; z-index: 6; }
 #cut-3 .main li:nth-child(4) { width: 40%; top: 65%; left: 35%; z-index: 6; }
@@ -2458,7 +2457,7 @@ body { overflow: hidden; }
 #cut-4 .main { position: absolute; left: 0; top: 0; width: auto; height: 100%; width: 100%; transform: perspective(150px) translateZ(-200px) translateY(2000px); z-index: 10; }
 #cut-4 .main li:nth-child(1) { left: 82%; top: 58%; width: 14%; z-index: 3; }
 #cut-4 .main li:nth-child(2) { top: 37%; left: 86%; width: 11%; z-index: 2; }
-#cut-4 .main li:nth-child(3) { width: 9%; left: 18%; top: 36%; z-index: 6; }
+#cut-4 .main li:nth-child(3) { width: 9%; left: 18%; top: 41%; z-index: 6; }
 #cut-4 .main li:nth-child(4) { width: 10%; top: 22%; left: 83%; z-index: 2; }
 #cut-4 .main li:nth-child(5) { width: 12%; top: 38%; left: 3%; z-index: 2; }
 #cut-4 .main li:nth-child(6) { width: 17%; top: 30%; left: 7%; z-index: 5; }
@@ -2469,7 +2468,7 @@ body { overflow: hidden; }
 #cut-4 .main li:nth-child(11) { width: 21%; top: 70%; left: 59%; z-index: 7; }
 #cut-4 .main li:nth-child(12) { width: 9%; top: 57%; left: 80%; }
 #cut-4 .main li:nth-child(13) { width: 21%; top: 50%; left: 62%; }
-#cut-4 .main li:nth-child(14) { width: 21%; left: 7.5%; top: 60%; }
+#cut-4 .main li:nth-child(14) { width: 21%; left: 6.5%; top: 62%; }
 #cut-4 .main li:nth-child(15) { width: 12%; top: 52%; left: 3%; }
 #cut-4 .main li:nth-child(16) { width: 14%; top: 58%; left: 51%; }
 #cut-4 .main li:nth-child(17) { width: 14%; top: 10%; left: 77.5%; }
