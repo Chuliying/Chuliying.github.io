@@ -4,6 +4,44 @@ window.onbeforeunload = function () {
 }
 
 $(document).ready(function () {
+
+    (function () {
+        loadbar();
+        function id(v) { return document.getElementById(v); }
+        function loadbar() {
+            var ovrl = id("overlay"),
+                prog = id("progress"),
+                stat = id("progstat"),
+                img = document.images,
+                c = 0;
+            tot = img.length;
+    
+            function imgLoaded() {
+                c += 1;
+                var perc = ((100 / tot * c) << 0) + "%";
+                prog.style.width = perc;
+                stat.innerHTML = "Loading " + perc;
+                if (c === tot) return doneLoading();
+            }
+            function doneLoading() {
+                ovrl.style.opacity = 0;
+                loaded();
+                setTimeout(function () {
+                    ovrl.style.display = "none";
+                }, 800);
+            }
+            for (var i = 0; i < tot; i++) {
+                var tImg = new Image();
+                tImg.onload = imgLoaded;
+                tImg.onerror = imgLoaded;
+                tImg.src = img[i].src;
+            }
+            
+        }
+        document.addEventListener('DOMContentLoaded', loadbar, false);
+        
+    }());
+
     // Var
     const _scrollValue = 2500;
     const $bg_li = $('.bg li')
@@ -116,7 +154,7 @@ $(document).ready(function () {
     $body.css('height', 4 * _scrollValue + _vh);
     // image loaded then
 
-    $('#cut-landing').imagesLoaded(function () {
+    function loaded () {
         const _paddingTopValue = ($(window).height() - $(window).width() * 0.416) / 2;
         $lightbox.find('ul').css("padding-top", _paddingTopValue);
         $wrapper.fadeIn(500);
@@ -518,5 +556,5 @@ $(document).ready(function () {
             y: 0,
             immediateRender: false
         })
-    });
+    }
 });
