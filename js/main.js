@@ -116,7 +116,7 @@ $(document).ready(function () {
     $body.css('height', 4 * _scrollValue + _vh);
     // image loaded then
 
-    $body.imagesLoaded(function () {
+    $('#cut-landing').imagesLoaded(function () {
         const _paddingTopValue = ($(window).height() - $(window).width() * 0.416) / 2;
         $lightbox.find('ul').css("padding-top", _paddingTopValue);
         $wrapper.fadeIn(500);
