@@ -36,7 +36,7 @@ $(document).ready(function () {
                 tImg.onerror = imgLoaded;
                 tImg.src = img[i].src;
             }
-            
+
         }
         document.addEventListener('DOMContentLoaded', loadbar, false);
         
@@ -122,7 +122,6 @@ $(document).ready(function () {
 
     $(window).scroll(function (event) {
         const scroll = $(window).scrollTop();
-        console.log(scroll, 3.97*_scrollValue);
         if (scroll == 0) {
             window.scrollTo(0, 4 * _scrollValue - 35);
         }

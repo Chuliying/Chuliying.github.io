@@ -98,7 +98,7 @@ $(document).ready(function () {
   });
 
   function closeMedia() {
-    if (player) {
+    if (player.stopVideo !== undefined) {
       player.stopVideo();
     }
     $descriptionLi.css("opacity", 0).text('');
@@ -226,7 +226,8 @@ $(document).ready(function () {
           iv_load_policy: 3,      // 隱藏影片註解
           autohide: 0,            // 影片播放時，隱藏影片控制列
           playlist: '',
-          loop: 1
+          loop: 1,
+          origin: 'https://chuliying.github.io/'
         },
         events: {
           onReady: bindEvent,
