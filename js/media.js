@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const _scrollValue = 2500;
+  const _scrollValue = 5000;
   const $videoContainer = $('.video-container');
   const $mainLi = $('.main li');
   const $descriptionLi = $('.right-description li')
@@ -71,33 +71,65 @@ $(document).ready(function () {
   var player;
   var music;
   var voice;
+  var autoPlayTimeout;
 
   const $cut = $('.cut');
+  const _autoMedia = [
+    {
+      video: 1,
+      music: 0,
+      voice: 0
+    },
+    {
+      video: 10,
+      music: 4,
+      voice: 6
+    },
+    {
+      video: 13,
+      music: 10,
+      voice: 11
+    },
+    {
+      video: 19,
+      music: 12,
+      voice: 13
+    }
+  ];
+
+  function autoPlay(i) {
+    clearTimeout(autoPlayTimeout);
+    autoPlayTimeout = setTimeout(function () {
+      playMedia("video", _autoMedia[i].video);
+      playMedia("music", _autoMedia[i].music);
+      playMedia("voice", _autoMedia[i].voice);
+    }, 4000);
+    autoPlayTimeout;
+  }
 
   $(window).scroll(function (event) {
     const scroll = $(window).scrollTop();
     for (i = 0; i < $cut.length; i++) {
-      if (scroll > (i + 0.7) * _scrollValue && scroll < (i + 0.9) * _scrollValue) {
+      const _zoneStart = i * _scrollValue;
+      const _activeZoneStart = (i + 0.7) * _scrollValue;
+      const _activeZoneEnd = (i + 0.9) * _scrollValue;
+      if (scroll > _activeZoneStart && scroll < _activeZoneEnd) {
         const _cutValue = i + 1;
         const _classValue = "video-" + _cutValue;
         $videoContainer.removeAttr('id');
         $videoContainer.attr('id', _classValue);
+        autoPlay(i);
       }
 
-      else {
+      if (scroll > _zoneStart && (scroll < _activeZoneStart || scroll > _activeZoneEnd)) {
         closeMedia();
         $videoContainer.fadeOut(300);
       }
     }
-    if (scroll > .9 * _scrollValue && scroll < .95 * _scrollValue) {
-    }
-
-    else {
-      closeMedia();
-    }
   });
 
   function closeMedia() {
+    clearTimeout(autoPlayTimeout);
     if (player.stopVideo !== undefined) {
       player.stopVideo();
     }
@@ -110,44 +142,26 @@ $(document).ready(function () {
     }
   }
 
-  function compareVisited(type, key) {
-    $listLi.each(function () {
-      const _type = $(this).attr('data-type');
-      const _key = $(this).attr('data-key');
+  // function compareVisited(type, key) {
+  //   $listLi.each(function () {
+  //     const _type = $(this).attr('data-type');
+  //     const _key = $(this).attr('data-key');
 
-      if (_type === type && _key === key) {
-        $(this).addClass('visited');
-      }
-    })
-  }
+  //     if (_type === type && _key === key) {
+  //       $(this).addClass('visited');
+  //     }
+  //   })
+  // }
 
-  onYouTubeIframeAPIReady();
-  const $main_btn = $('.main li');
-  function bindEvent() {
-    $main_btn.add($listLi).click(function () {
-      const _type = $(this).attr('data-type');
-      const _key = $(this).attr('data-key');
-      switch (_type) {
-        case "video":
-          $videoContainer.fadeIn(300);
-          videoId = _video[_key].url;
-          player.loadVideoById(_video[_key].url);
-          $descriptionLi.eq(0).text("影像：" + _video[_key].name).css("opacity", 1);
-          break;
-      }
-      compareVisited(_type, _key);
-    });
-  }
-  $removeBtn.click(function () {
-    $lightbox.fadeOut(300);
-    for (var i = 0; i < $iframe.length; i++) {
-      $iframe[i].src = $iframe[i].src;
-    }
-  });
-  $main_btn.add($listLi).click(function () {
-    const _type = $(this).attr('data-type');
-    const _key = $(this).attr('data-key');
+  function playMedia(_type, _key) {
+    clearTimeout(autoPlayTimeout);
     switch (_type) {
+      case "video":
+        $videoContainer.fadeIn(300);
+        videoId = _video[_key].url;
+        player.loadVideoById(_video[_key].url);
+        $descriptionLi.eq(0).text("影像：" + _video[_key].name).css("opacity", 1);
+        break;
       case "concert":
         let key;
         if (_key == 0) {
@@ -185,7 +199,27 @@ $(document).ready(function () {
         voice.play();
         break;
     }
-    compareVisited(_type, _key);  
+  }
+
+  onYouTubeIframeAPIReady();
+  const $main_btn = $('.main li');
+  function bindEvent() {
+    $main_btn.add($listLi).click(function () {
+      const _type = $(this).attr('data-type');
+      const _key = $(this).attr('data-key');
+      playMedia(_type, _key);
+    });
+  }
+  $removeBtn.click(function () {
+    $lightbox.fadeOut(300);
+    for (var i = 0; i < $iframe.length; i++) {
+      $iframe[i].src = $iframe[i].src;
+    }
+  });
+  $main_btn.add($listLi).click(function () {
+    const _type = $(this).attr('data-type');
+    const _key = $(this).attr('data-key');
+    playMedia(_type, _key);
   });
 
 
@@ -226,8 +260,7 @@ $(document).ready(function () {
           iv_load_policy: 3,      // 隱藏影片註解
           autohide: 0,            // 影片播放時，隱藏影片控制列
           playlist: '',
-          loop: 1,
-          origin: 'https://chuliying.github.io/'
+          loop: 1
         },
         events: {
           onReady: bindEvent,

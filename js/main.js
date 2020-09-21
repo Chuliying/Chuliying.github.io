@@ -43,7 +43,7 @@ $(document).ready(function () {
         }());
     
         // Var
-        const _scrollValue = 2500;
+        const _scrollValue = 5000;
         const $bg_li = $('.bg li')
         const $bg_0 = $('.bg-0');
         const $bg_1 = $('.bg-1');
@@ -268,7 +268,7 @@ $(document).ready(function () {
                         start: .065 * _scrollValue,
                         end: .7 * _scrollValue
                     },
-                    y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+                    y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed * 0.5,
                     rotation: (i > 2) ? random(-45, 45) : 0,
                     ease: "slow"
                 });
@@ -355,7 +355,7 @@ $(document).ready(function () {
                         start: 1.065 * _scrollValue,
                         end: 1.7 * _scrollValue
                     },
-                    x: (i, target) => ScrollTrigger.maxScroll(window) * target.dataset.speed,
+                    x: (i, target) => ScrollTrigger.maxScroll(window) * target.dataset.speed * 0.5,
                     ease: "slow"
                 });
             })
@@ -439,7 +439,7 @@ $(document).ready(function () {
                         start: 3.065 * _scrollValue,
                         end: 3.7 * _scrollValue
                     },
-                    x: (i, target) => ScrollTrigger.maxScroll(window) * target.dataset.speed * -1,
+                    x: (i, target) => ScrollTrigger.maxScroll(window) * target.dataset.speed * 0.5 * -1,
                     ease: "slow"
                 });
             })
@@ -521,7 +521,7 @@ $(document).ready(function () {
                         start: 2.065 * _scrollValue - 500,
                         end: 2.7 * _scrollValue - 500
                     },
-                    yPercent: (i, target) => ScrollTrigger.maxScroll(window) * target.dataset.speed,
+                    yPercent: (i, target) => ScrollTrigger.maxScroll(window) * target.dataset.speed * 0.5,
                     ease: "slow"
                 });
             })
