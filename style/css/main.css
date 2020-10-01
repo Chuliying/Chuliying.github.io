@@ -2297,6 +2297,7 @@ body { overflow: hidden; }
 .menu .main-share > li div img { margin: 10vh auto 25px; height: 250px; width: 250px; border-radius: 100%; }
 .menu .main-share > li div h5 { font-size: 29px; margin: 5px auto 75px; font-family: 'Gentium Basic', serif; font-weight: normal; color: #ccc; }
 .menu .copyright { font-family: 'Libre Caslon Display', serif; color: #ccc; padding: 60px 45px; position: absolute; top: 52%; height: 40%; }
+.menu .copyright a { color: #fff; text-decoration: underline; font-weight: bold; }
 .menu .copyright h5 { font-size: 18px; letter-spacing: 1.5px; }
 .menu .copyright ul { margin: auto; margin-top: 25px; display: flex; }
 .menu .copyright ul li { display: inline-block; line-height: 1.65em; font-size: 14px; color: #eee; }
