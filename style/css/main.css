@@ -2291,6 +2291,7 @@ body { overflow: hidden; }
 #cut-landing .bg-items .layer-8 img { top: -10%; left: 15%; width: 100%; }
 
 .menu { position: fixed; top: 0; left: 0; height: 100%; width: 100%; background-image: url("../../images/menu-bg.jpg"); z-index: 10000; background-size: 100% 100%; display: none; padding: 60px 45px; }
+.menu h5 { color: #fff; margin-bottom: -15px; font-size: 18px; text-align: center; letter-spacing: 1px; }
 .menu .main-share { display: flex; flex-wrap: wrap; height: 55%; }
 .menu .main-share > li { width: 33.333333%; text-align: center; }
 .menu .main-share > li div img { margin: 10vh auto 25px; height: 250px; width: 250px; border-radius: 100%; }

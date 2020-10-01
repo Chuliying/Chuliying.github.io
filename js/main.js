@@ -1,6 +1,6 @@
 // 每次loading回頂部
 window.onbeforeunload = function () {
-    window.scrollTo(0, 1);
+    window.scrollTo(0, 3);
 }
 
 $(document).ready(function () {
@@ -43,7 +43,7 @@ $(document).ready(function () {
         }());
     
         // Var
-        const _scrollValue = 5000;
+        const _scrollValue = 10000;
         const $bg_li = $('.bg li')
         const $bg_0 = $('.bg-0');
         const $bg_1 = $('.bg-1');
@@ -119,14 +119,18 @@ $(document).ready(function () {
                 autoAlpha: 0
             });
         });
-    
+        // for loop
         $(window).scroll(function (event) {
             const scroll = $(window).scrollTop();
-            if (scroll == 0) {
-                window.scrollTo(0, 4 * _scrollValue - 35);
+            if (scroll < 3) {
+                $('#main-cut').css("display","none")
+                $('#main-cut').delay(300).fadeIn(500);
+                window.scrollTo(0, 3.9 * _scrollValue);
             }
     
             if (scroll > 3.99 * _scrollValue ) {
+                $('#main-cut').css("display","none")
+                $('#main-cut').delay(300).fadeIn(500);
                 window.scrollTo(0, 5);
     
             }
@@ -268,7 +272,7 @@ $(document).ready(function () {
                         start: .065 * _scrollValue,
                         end: .7 * _scrollValue
                     },
-                    y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed * 0.5,
+                    y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed * ( 2500  / _scrollValue   ),
                     rotation: (i > 2) ? random(-45, 45) : 0,
                     ease: "slow"
                 });
@@ -355,7 +359,7 @@ $(document).ready(function () {
                         start: 1.065 * _scrollValue,
                         end: 1.7 * _scrollValue
                     },
-                    x: (i, target) => ScrollTrigger.maxScroll(window) * target.dataset.speed * 0.5,
+                    x: (i, target) => ScrollTrigger.maxScroll(window) * target.dataset.speed * ( 2500  / _scrollValue   ),
                     ease: "slow"
                 });
             })
@@ -439,7 +443,7 @@ $(document).ready(function () {
                         start: 3.065 * _scrollValue,
                         end: 3.7 * _scrollValue
                     },
-                    x: (i, target) => ScrollTrigger.maxScroll(window) * target.dataset.speed * 0.5 * -1,
+                    x: (i, target) => ScrollTrigger.maxScroll(window) * target.dataset.speed * ( 2500  / _scrollValue   ) * -1,
                     ease: "slow"
                 });
             })
@@ -521,7 +525,7 @@ $(document).ready(function () {
                         start: 2.065 * _scrollValue - 500,
                         end: 2.7 * _scrollValue - 500
                     },
-                    yPercent: (i, target) => ScrollTrigger.maxScroll(window) * target.dataset.speed * 0.5,
+                    yPercent: (i, target) => ScrollTrigger.maxScroll(window) * target.dataset.speed * ( 2500  / _scrollValue   ),
                     ease: "slow"
                 });
             })

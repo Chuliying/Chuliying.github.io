@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const _scrollValue = 5000;
+  const _scrollValue = 10000;
   const $videoContainer = $('.video-container');
   const $mainLi = $('.main li');
   const $descriptionLi = $('.right-description li')
@@ -76,23 +76,23 @@ $(document).ready(function () {
   const $cut = $('.cut');
   const _autoMedia = [
     {
-      video: 1,
-      music: 0,
-      voice: 0
+      video: 2,
+      music: 1,
+      voice: 4
     },
     {
       video: 10,
       music: 4,
-      voice: 6
+      voice: 5
     },
     {
-      video: 13,
+      video: 16,
       music: 10,
-      voice: 11
+      voice: 12
     },
     {
       video: 19,
-      music: 12,
+      music: 13,
       voice: 13
     }
   ];
@@ -103,7 +103,7 @@ $(document).ready(function () {
       playMedia("video", _autoMedia[i].video);
       playMedia("music", _autoMedia[i].music);
       playMedia("voice", _autoMedia[i].voice);
-    }, 4000);
+    }, 500);
     autoPlayTimeout;
   }
 
@@ -121,7 +121,7 @@ $(document).ready(function () {
         autoPlay(i);
       }
 
-      if (scroll > _zoneStart && (scroll < _activeZoneStart || scroll > _activeZoneEnd)) {
+      if (scroll > _zoneStart || (scroll < _activeZoneStart || scroll > _activeZoneEnd)) {
         closeMedia();
         $videoContainer.fadeOut(300);
       }

@@ -16,13 +16,14 @@
                 本網站僅供桌機瀏覽。
             </p>
         </div>
-        
+
     </div>
 
     <div id="overlay">
         <div id="progstat"></div>
         <div id="progress"></div>
     </div>
+    <div class="bottom" id="bottom"></div>
 
     <div class="wrapper">
         <ul class="location">
@@ -105,14 +106,17 @@
             <div class="info">
                 <div>
                     i
-                </div> 
+                </div>
                 <p>
-                    本網站為體驗式網站，當你使用滑鼠上下移動會前往下一個地點，每到一個地方可以選擇自己喜歡的影像音樂文本搭配。
+                    本網站為體驗式網站，當你使用滑鼠上下滾動會前往下一個地點，每到一個地方可以抽換自己喜歡的影像音樂文本搭配。
                 </p>
             </div>
         </div>
-    
+
         <div class="menu">
+            <h5>
+                你可以在此看見所有素材
+            </h5>
             <ul class="main-share">
                 <li>
                     <a href="#">
@@ -369,317 +373,319 @@
                 </li>
             </ul>
         </div>
-        <div id="cut-1" class="cut">
-            <div class="clip">
-                <ul>
-                    <li data-speed="0.35">
-                        <img src="images/cut-image/cut-1-8.png" class="floating">
-                    </li>
-                    <li data-speed="0.35">
-                        <img src="images/cut-image/cut-1-2.png" class="floating">
-                    </li>
-                    <li class="floating" data-speed="0.25">
-                        <img src="images/cut-image/cut-1-10.png" class="floating">
-                    </li>
-                    <li class="floating" data-speed="0.3">
-                        <img src="images/cut-image/cut-1-16.png" class="floating">
-                    </li>
-                    <li class="floating" data-speed="0.35">
-                        <img src="images/cut-image/cut-1-11.png" class="floating">
-                    </li>
-                    <li class="floating" data-speed="0.17">
-                        <img src="images/cut-image/cut-1-7.png" class="floating">
-                    </li>
-                    <li class="floating" data-speed="0.24">
-                        <img src="images/cut-image/cut-1-12.png" class="floating">
-                    </li>
-                    <li class="floating" data-speed="0.22">
-                        <img src="images/cut-image/cut-1-13.png" class="floating">
-                    </li>
-                    <li class="floating" data-speed="0.28">
-                        <img src="images/cut-image/cut-1-9.png" class="floating">
-                    </li>
-                    <li class="floating" data-speed="0.25">
-                        <img src="images/cut-image/cut-1-6.png" class="floating">
-                    </li>
-                    <li class="floating" data-speed="0.13">
-                        <img src="images/cut-image/cut-1-9.png" class="floating">
-                    </li>
-                    <li class="floating" data-speed="0.14">
-                        <img src="images/cut-image/cut-1-14.png" class="floating">
-                    </li>
-                    <li class="floating" data-speed="0.12">
-                        <img src="images/cut-image/cut-1-15.png" class="floating">
-                    </li>
-                    <li class="floating" data-speed="0.13">
-                        <img src="images/cut-image/cut-1-1.png" class="floating">
-                    </li>
-                    <li class="floating" data-speed="0.15">
-                        <img src="images/cut-image/cut-1-13.png" class="floating">
-                    </li>
-                </ul>
+        <div id="main-cut">
+            <div id="cut-1" class="cut">
+                <div class="clip">
+                    <ul>
+                        <li data-speed="0.35">
+                            <img src="images/cut-image/cut-1-8.png" class="floating">
+                        </li>
+                        <li data-speed="0.35">
+                            <img src="images/cut-image/cut-1-2.png" class="floating">
+                        </li>
+                        <li class="floating" data-speed="0.25">
+                            <img src="images/cut-image/cut-1-10.png" class="floating">
+                        </li>
+                        <li class="floating" data-speed="0.3">
+                            <img src="images/cut-image/cut-1-16.png" class="floating">
+                        </li>
+                        <li class="floating" data-speed="0.35">
+                            <img src="images/cut-image/cut-1-11.png" class="floating">
+                        </li>
+                        <li class="floating" data-speed="0.17">
+                            <img src="images/cut-image/cut-1-7.png" class="floating">
+                        </li>
+                        <li class="floating" data-speed="0.24">
+                            <img src="images/cut-image/cut-1-12.png" class="floating">
+                        </li>
+                        <li class="floating" data-speed="0.22">
+                            <img src="images/cut-image/cut-1-13.png" class="floating">
+                        </li>
+                        <li class="floating" data-speed="0.28">
+                            <img src="images/cut-image/cut-1-9.png" class="floating">
+                        </li>
+                        <li class="floating" data-speed="0.25">
+                            <img src="images/cut-image/cut-1-6.png" class="floating">
+                        </li>
+                        <li class="floating" data-speed="0.13">
+                            <img src="images/cut-image/cut-1-9.png" class="floating">
+                        </li>
+                        <li class="floating" data-speed="0.14">
+                            <img src="images/cut-image/cut-1-14.png" class="floating">
+                        </li>
+                        <li class="floating" data-speed="0.12">
+                            <img src="images/cut-image/cut-1-15.png" class="floating">
+                        </li>
+                        <li class="floating" data-speed="0.13">
+                            <img src="images/cut-image/cut-1-1.png" class="floating">
+                        </li>
+                        <li class="floating" data-speed="0.15">
+                            <img src="images/cut-image/cut-1-13.png" class="floating">
+                        </li>
+                    </ul>
+                </div>
+                <div class="main">
+                    <ul>
+                        <li class="floating" data-type="music" data-key="3">
+                            <img src="images/cut-1/cut-1-main-1.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="video" data-key="5">
+                            <img src="images/cut-1/cut-1-main-2.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="video" data-key="2">
+                            <img src="images/cut-1/cut-1-main-3.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="video" data-key="4">
+                            <img src="images/cut-1/cut-1-main-4.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="music" data-key="2">
+                            <img src="images/cut-1/cut-1-main-5.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="concert" data-key="0">
+                            <img src="images/cut-1/cut-1-main-6.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="video" data-key="6">
+                            <img src="images/cut-1/cut-1-main-7.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="voice" data-key="2">
+                            <img src="images/cut-1/cut-1-main-8.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="voice" data-key="0">
+                            <img src="images/cut-1/cut-1-main-9.png" class="floating">
+                        </li>
+                        <li class="">
+                            <img src="images/cut-1/cut-1-main-10.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="voice" data-key="1">
+                            <img src="images/cut-1/cut-1-main-11.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="music" data-key="0">
+                            <img src="images/cut-1/cut-1-main-12.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="voice" data-key="4">
+                            <img src="images/cut-1/cut-1-main-13.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="voice" data-key="3">
+                            <img src="images/cut-1/cut-1-main-14.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="music" data-key="1">
+                            <img src="images/cut-1/cut-1-main-15.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="video" data-key="1">
+                            <img src="images/cut-1/cut-1-main-16.png" class="floating">
+                        </li>
+                        <li>
+                            <img src="images/cut-1/cut-1-main-17.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="video" data-key="3">
+                            <img src="images/cut-1/cut-1-main-18.png" class="floating">
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="main">
-                <ul>
-                    <li class="floating" data-type="music" data-key="3">
-                        <img src="images/cut-1/cut-1-main-1.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="video" data-key="5">
-                        <img src="images/cut-1/cut-1-main-2.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="video" data-key="2">
-                        <img src="images/cut-1/cut-1-main-3.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="video" data-key="4">
-                        <img src="images/cut-1/cut-1-main-4.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="music" data-key="2">
-                        <img src="images/cut-1/cut-1-main-5.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="concert" data-key="0">
-                        <img src="images/cut-1/cut-1-main-6.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="video" data-key="6">
-                        <img src="images/cut-1/cut-1-main-7.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="voice" data-key="2">
-                        <img src="images/cut-1/cut-1-main-8.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="voice" data-key="0">
-                        <img src="images/cut-1/cut-1-main-9.png" class="floating">
-                    </li>
-                    <li class="">
-                        <img src="images/cut-1/cut-1-main-10.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="voice" data-key="1">
-                        <img src="images/cut-1/cut-1-main-11.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="music" data-key="0">
-                        <img src="images/cut-1/cut-1-main-12.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="voice" data-key="4">
-                        <img src="images/cut-1/cut-1-main-13.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="voice" data-key="3">
-                        <img src="images/cut-1/cut-1-main-14.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="music" data-key="1">
-                        <img src="images/cut-1/cut-1-main-15.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="video" data-key="1">
-                        <img src="images/cut-1/cut-1-main-16.png" class="floating">
-                    </li>
-                    <li>
-                        <img src="images/cut-1/cut-1-main-17.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="video" data-key="3">
-                        <img src="images/cut-1/cut-1-main-18.png" class="floating">
-                    </li>
-                </ul>
+            <div id="cut-2" class="cut">
+                <div class="clip">
+                    <ul>
+                        <li data-speed="0.22">
+                            <img src="images/cut-image/cut-2-clip1.png" class="floating">
+                        </li>
+                        <li data-speed="0.21">
+                            <img src="images/cut-image/cut-2-clip2.png" class="floating">
+                        </li>
+                        <li data-speed="0.20">
+                            <img src="images/cut-image/cut-2-clip3.png" class="floating">
+                        </li>
+                        <li data-speed="0.19">
+                            <img src="images/cut-image/cut-2-clip4.png" class="floating">
+                        </li>
+                        <li data-speed="0.18">
+                            <img src="images/cut-image/cut-2-clip5.png" class="floating">
+                        </li>
+                    </ul>
+                </div>
+                <div class="main">
+                    <ul>
+                        <li class="floating" data-type="voice" data-key="6">
+                            <img src="images/cut-2/cut-2-1.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="music" data-key="6">
+                            <img src="images/cut-2/cut-2-2.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="video" data-key="10">
+                            <img src="images/cut-2/cut-2-3.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="video" data-key="13">
+                            <img src="images/cut-2/cut-2-4.png" class="floating">
+                        </li>
+                        <li>
+                            <img src="images/cut-2/cut-2-5.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="music" data-key="4">
+                            <img src="images/cut-2/cut-2-6.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="concert" data-key="7">
+                            <img src="images/cut-2/cut-2-7.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="voice" data-key="5">
+                            <img src="images/cut-2/cut-2-8.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="music" data-key="5">
+                            <img src="images/cut-2/cut-2-9.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="music" data-key="7">
+                            <img src="images/cut-2/cut-2-10.png" class="floating">
+                        </li>
+                        <li>
+                            <img src="images/cut-2/cut-2-11.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="video" data-key="8">
+                            <img src="images/cut-2/cut-2-12.png" class="floating">
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div id="cut-2" class="cut">
-            <div class="clip">
-                <ul>
-                    <li data-speed="0.22">
-                        <img src="images/cut-image/cut-2-clip1.png" class="floating">
-                    </li>
-                    <li data-speed="0.21">
-                        <img src="images/cut-image/cut-2-clip2.png" class="floating">
-                    </li>
-                    <li data-speed="0.20">
-                        <img src="images/cut-image/cut-2-clip3.png" class="floating">
-                    </li>
-                    <li data-speed="0.19">
-                        <img src="images/cut-image/cut-2-clip4.png" class="floating">
-                    </li>
-                    <li data-speed="0.18">
-                        <img src="images/cut-image/cut-2-clip5.png" class="floating">
-                    </li>
-                </ul>
+            <div id="cut-4" class="cut">
+                <div class="clip">
+                    <ul>
+                        <li data-speed="0.015">
+                            <img src="images/cut-image/cut-4-1.png" class="floating">
+                        </li>
+                        <li data-speed="0.025">
+                            <img src="images/cut-image/cut-4-2.png" class="floating">
+                        </li>
+                        <li data-speed="0.035">
+                            <img src="images/cut-image/cut-4-3.png" class="floating">
+                        </li>
+                        <li data-speed="0.05">
+                            <img src="images/cut-image/cut-4-4.png" class="floating">
+                        </li>
+                        <li data-speed="0.04">
+                            <img src="images/cut-image/cut-4-5.png" class="floating">
+                        </li>
+                        <li data-speed="0.05">
+                            <img src="images/cut-image/cut-4-6.png" class="floating">
+                        </li>
+                    </ul>
+                </div>
+                <div class="main">
+                    <ul>
+                        <li class="floating" data-type="voice" data-key="11">
+                            <img src="images/cut-4/cut-4-1.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="video" data-key="13">
+                            <img src="images/cut-4/cut-4-2.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="video" data-key="12">
+                            <img src="images/cut-4/cut-4-3.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="voice" data-key="7">
+                            <img src="images/cut-4/cut-4-4.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="voice" data-key="12">
+                            <img src="images/cut-4/cut-4-5.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="video" data-key="14">
+                            <img src="images/cut-4/cut-4-6.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="video" data-key="16">
+                            <img src="images/cut-4/cut-4-7.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="video" data-key="17">
+                            <img src="images/cut-4/cut-4-8.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="concert" data-key="11">
+                            <img src="images/cut-4/cut-4-9.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="voice" data-key="8">
+                            <img src="images/cut-4/cut-4-10.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="voice" data-key="9">
+                            <img src="images/cut-4/cut-4-11.png" class="floating">
+                        </li>
+                        <li>
+                            <img src="images/cut-4/cut-4-12.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="voice" data-key="10">
+                            <img src="images/cut-4/cut-4-13.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="music" data-key="10">
+                            <img src="images/cut-4/cut-4-14.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="video" data-key="15">
+                            <img src="images/cut-4/cut-4-15.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="music" data-key="8">
+                            <img src="images/cut-4/cut-4-16.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="music" data-key="9">
+                            <img src="images/cut-4/cut-4-17.png" class="floating">
+                        </li>
+                        <li>
+                            <img src="images/cut-4/cut-4-18.png" class="floating">
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="main">
-                <ul>
-                    <li class="floating" data-type="voice" data-key="6">
-                        <img src="images/cut-2/cut-2-1.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="music" data-key="6">
-                        <img src="images/cut-2/cut-2-2.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="video" data-key="10">
-                        <img src="images/cut-2/cut-2-3.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="video" data-key="13">
-                        <img src="images/cut-2/cut-2-4.png" class="floating">
-                    </li>
-                    <li>
-                        <img src="images/cut-2/cut-2-5.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="music" data-key="4">
-                        <img src="images/cut-2/cut-2-6.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="concert" data-key="7">
-                        <img src="images/cut-2/cut-2-7.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="voice" data-key="5">
-                        <img src="images/cut-2/cut-2-8.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="music" data-key="5">
-                        <img src="images/cut-2/cut-2-9.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="music" data-key="7">
-                        <img src="images/cut-2/cut-2-10.png" class="floating">
-                    </li>
-                    <li>
-                        <img src="images/cut-2/cut-2-11.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="video" data-key="8">
-                        <img src="images/cut-2/cut-2-12.png" class="floating">
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div id="cut-4" class="cut">
-            <div class="clip">
-                <ul>
-                    <li data-speed="0.015">
-                        <img src="images/cut-image/cut-4-1.png" class="floating">
-                    </li>
-                    <li data-speed="0.025">
-                        <img src="images/cut-image/cut-4-2.png" class="floating">
-                    </li>
-                    <li data-speed="0.035">
-                        <img src="images/cut-image/cut-4-3.png" class="floating">
-                    </li>
-                    <li data-speed="0.05">
-                        <img src="images/cut-image/cut-4-4.png" class="floating">
-                    </li>
-                    <li data-speed="0.04">
-                        <img src="images/cut-image/cut-4-5.png" class="floating">
-                    </li>
-                    <li data-speed="0.05">
-                        <img src="images/cut-image/cut-4-6.png" class="floating">
-                    </li>
-                </ul>
-            </div>
-            <div class="main">
-                <ul>
-                    <li class="floating" data-type="voice" data-key="11">
-                        <img src="images/cut-4/cut-4-1.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="video" data-key="13">
-                        <img src="images/cut-4/cut-4-2.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="video" data-key="12">
-                        <img src="images/cut-4/cut-4-3.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="voice" data-key="7">
-                        <img src="images/cut-4/cut-4-4.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="voice" data-key="12">
-                        <img src="images/cut-4/cut-4-5.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="video" data-key="14">
-                        <img src="images/cut-4/cut-4-6.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="video" data-key="16">
-                        <img src="images/cut-4/cut-4-7.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="video" data-key="17">
-                        <img src="images/cut-4/cut-4-8.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="concert" data-key="11">
-                        <img src="images/cut-4/cut-4-9.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="voice" data-key="8">
-                        <img src="images/cut-4/cut-4-10.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="voice" data-key="9">
-                        <img src="images/cut-4/cut-4-11.png" class="floating">
-                    </li>
-                    <li>
-                        <img src="images/cut-4/cut-4-12.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="voice" data-key="10">
-                        <img src="images/cut-4/cut-4-13.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="music" data-key="10">
-                        <img src="images/cut-4/cut-4-14.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="video" data-key="15">
-                        <img src="images/cut-4/cut-4-15.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="music" data-key="8">
-                        <img src="images/cut-4/cut-4-16.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="music" data-key="9">
-                        <img src="images/cut-4/cut-4-17.png" class="floating">
-                    </li>
-                    <li>
-                        <img src="images/cut-4/cut-4-18.png" class="floating">
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div id="cut-3" class="cut">
-            <div class="clip">
-                <ul>
-                    <li data-speed="0.24">
-                        <img src="images/cut-image/cut-3-1.png" class="floating">
-                    </li>
-                    <li data-speed="0.22">
-                        <img src="images/cut-image/cut-3-2.png" class="floating">
-                    </li>
-                    <li data-speed="0.18">
-                        <img src="images/cut-image/cut-3-3.png" class="floating">
-                    </li>
-                    <li data-speed="0.17">
-                        <img src="images/cut-image/cut-3-4.png" class="floating">
-                    </li>
-                    <li data-speed="0.15">
-                        <img src="images/cut-image/cut-3-5.png" class="floating">
-                    </li>
-                </ul>
-            </div>
-            <div class="main">
-                <ul>
-                    <li class="floating" data-type="video" data-key="19">
-                        <img src="images/cut-3/cut-3-1.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="voice" data-key="13">
-                        <img src="images/cut-3/cut-3-2.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="video" data-key="21">
-                        <img src="images/cut-3/cut-3-3.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="concert" data-key="18">
-                        <img src="images/cut-3/cut-3-4.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="music" data-key="12">
-                        <img src="images/cut-3/cut-3-5.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="video" data-key="20">
-                        <img src="images/cut-3/cut-3-6.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="voice" data-key="14">
-                        <img src="images/cut-3/cut-3-7.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="music" data-key="13">
-                        <img src="images/cut-3/cut-3-8.png" class="floating">
-                    </li>
-                    <li>
-                        <img src="images/cut-3/cut-3-9.png" class="floating">
-                    </li>
-                    <li>
-                        <img src="images/cut-3/cut-3-10.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="music" data-key="11">
-                        <img src="images/cut-3/cut-3-11.png" class="floating">
-                    </li>
-                    <li class="floating" data-type="voice" data-key="15">
-                        <img src="images/cut-3/cut-3-12.png" class="floating">
-                    </li>
-                </ul>
+            <div id="cut-3" class="cut">
+                <div class="clip">
+                    <ul>
+                        <li data-speed="0.24">
+                            <img src="images/cut-image/cut-3-1.png" class="floating">
+                        </li>
+                        <li data-speed="0.22">
+                            <img src="images/cut-image/cut-3-2.png" class="floating">
+                        </li>
+                        <li data-speed="0.18">
+                            <img src="images/cut-image/cut-3-3.png" class="floating">
+                        </li>
+                        <li data-speed="0.17">
+                            <img src="images/cut-image/cut-3-4.png" class="floating">
+                        </li>
+                        <li data-speed="0.15">
+                            <img src="images/cut-image/cut-3-5.png" class="floating">
+                        </li>
+                    </ul>
+                </div>
+                <div class="main">
+                    <ul>
+                        <li class="floating" data-type="video" data-key="19">
+                            <img src="images/cut-3/cut-3-1.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="voice" data-key="13">
+                            <img src="images/cut-3/cut-3-2.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="video" data-key="21">
+                            <img src="images/cut-3/cut-3-3.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="concert" data-key="18">
+                            <img src="images/cut-3/cut-3-4.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="music" data-key="12">
+                            <img src="images/cut-3/cut-3-5.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="video" data-key="20">
+                            <img src="images/cut-3/cut-3-6.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="voice" data-key="14">
+                            <img src="images/cut-3/cut-3-7.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="music" data-key="13">
+                            <img src="images/cut-3/cut-3-8.png" class="floating">
+                        </li>
+                        <li>
+                            <img src="images/cut-3/cut-3-9.png" class="floating">
+                        </li>
+                        <li>
+                            <img src="images/cut-3/cut-3-10.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="music" data-key="11">
+                            <img src="images/cut-3/cut-3-11.png" class="floating">
+                        </li>
+                        <li class="floating" data-type="voice" data-key="15">
+                            <img src="images/cut-3/cut-3-12.png" class="floating">
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="footer">
@@ -837,7 +843,7 @@
         </div>
     </div>
     <script>
-    
+
     </script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src='https://www.youtube.com/iframe_api'></script>
