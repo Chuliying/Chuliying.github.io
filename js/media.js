@@ -70,7 +70,7 @@ $(document).ready(function () {
 
   var player;
   var music;
-  var voice;
+  var concept;
   var autoPlayTimeout;
 
   const $cut = $('.cut');
@@ -78,22 +78,22 @@ $(document).ready(function () {
     {
       video: 2,
       music: 1,
-      voice: 4
+      concept: 4
     },
     {
       video: 10,
       music: 4,
-      voice: 5
+      concept: 5
     },
     {
       video: 16,
       music: 10,
-      voice: 12
+      concept: 12
     },
     {
       video: 19,
       music: 13,
-      voice: 13
+      concept: 13
     }
   ];
 
@@ -102,7 +102,7 @@ $(document).ready(function () {
     autoPlayTimeout = setTimeout(function () {
       playMedia("video", _autoMedia[i].video);
       playMedia("music", _autoMedia[i].music);
-      playMedia("voice", _autoMedia[i].voice);
+      playMedia("concept", _autoMedia[i].concept);
     }, 500);
     autoPlayTimeout;
   }
@@ -121,7 +121,12 @@ $(document).ready(function () {
         autoPlay(i);
       }
 
-      if (scroll > _zoneStart || (scroll < _activeZoneStart || scroll > _activeZoneEnd)) {
+      // if (scroll > _zoneStart || (scroll < _activeZoneStart || scroll > _activeZoneEnd)) {
+      //   closeMedia();
+      //   $videoContainer.fadeOut(300);
+      // }
+
+      if (music) {
         closeMedia();
         $videoContainer.fadeOut(300);
       }
@@ -137,8 +142,8 @@ $(document).ready(function () {
     if (music) {
       music.pause();
     }
-    if (voice) {
-      voice.pause();
+    if (concept) {
+      concept.pause();
     }
   }
 
@@ -190,13 +195,13 @@ $(document).ready(function () {
         $descriptionLi.eq(1).text("音樂：" + _music[_key].name).css("opacity", 1);
         music.play();
         break;
-      case "voice":
-        if (voice) {
-          voice.pause();
+      case "concept":
+        if (concept) {
+          concept.pause();
         }
-        voice = new Audio(_voice[_key].url);
+        concept = new Audio(_voice[_key].url);
         $descriptionLi.eq(2).text("旁白：" + _voice[_key].name).css("opacity", 1);
-        voice.play();
+        concept.play();
         break;
     }
   }
@@ -231,7 +236,7 @@ $(document).ready(function () {
       case "music":
         _title = _music[_key].name;
         break;
-      case "voice":
+      case "concept":
         _title = _voice[_key].name;
         break;
       case "video":
