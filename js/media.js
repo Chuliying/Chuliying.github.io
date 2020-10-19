@@ -103,7 +103,7 @@ $(document).ready(function () {
       playMedia("video", _autoMedia[i].video);
       playMedia("music", _autoMedia[i].music);
       playMedia("CONCEPT", _autoMedia[i].CONCEPT);
-    }, 500);
+    }, 1500);
     autoPlayTimeout;
   }
 

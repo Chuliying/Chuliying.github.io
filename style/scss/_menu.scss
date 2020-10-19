@@ -35,7 +35,8 @@
   .main-share{
     display: flex;
     flex-wrap: wrap;
-    height: 55%;
+    max-width: 1440px;
+    margin: auto;
     >li{
       width: 33.333333%;
       text-align: center;
@@ -44,7 +45,7 @@
           margin: 10vh auto 25px;
           height: 250px;
           width: 250px;
-          border-radius : 100%; 
+          border-radius : 100%;
         }
         
         h5{
