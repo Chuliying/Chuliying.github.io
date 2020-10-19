@@ -13,7 +13,17 @@
   display: none;
   padding: 60px 45px;
   overflow: auto;
-
+  .description{
+    max-width: 600px;
+    margin: 60px auto 120px;
+    h5{
+      margin-bottom: 45px;
+    }
+    p{
+      color: #eee;
+      line-height: 1.55em;
+    }
+  }
   h5{
     color: #fff;
     margin-bottom: -15px;
@@ -42,7 +52,7 @@
           margin: 5px auto 75px;
           font-family: 'Gentium Basic', serif;
           font-weight: normal;
-          color: #ccc;
+          color: #fff;
         
         }
       }
@@ -53,9 +63,14 @@
     font-family: 'Libre Caslon Display', serif;
     color: #ccc;
     padding: 60px 45px;
-    position: absolute;
-    top: 52%;
-    height: 40%;
+    max-width: 1280px;
+    margin: auto;
+    //position: absolute;
+    //top: 52%;
+    //height: 40%;
+    h5{
+      margin-bottom: 45px;
+    }
     a{
       color: #fff;
       text-decoration: underline;

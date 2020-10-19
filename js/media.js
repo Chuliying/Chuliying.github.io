@@ -70,7 +70,7 @@ $(document).ready(function () {
 
   var player;
   var music;
-  var concept;
+  var CONCEPT;
   var autoPlayTimeout;
 
   const $cut = $('.cut');
@@ -78,22 +78,22 @@ $(document).ready(function () {
     {
       video: 2,
       music: 1,
-      concept: 4
+      CONCEPT: 4
     },
     {
       video: 10,
       music: 4,
-      concept: 5
+      CONCEPT: 5
     },
     {
       video: 16,
       music: 10,
-      concept: 12
+      CONCEPT: 12
     },
     {
       video: 19,
       music: 13,
-      concept: 13
+      CONCEPT: 13
     }
   ];
 
@@ -102,7 +102,7 @@ $(document).ready(function () {
     autoPlayTimeout = setTimeout(function () {
       playMedia("video", _autoMedia[i].video);
       playMedia("music", _autoMedia[i].music);
-      playMedia("concept", _autoMedia[i].concept);
+      playMedia("CONCEPT", _autoMedia[i].CONCEPT);
     }, 500);
     autoPlayTimeout;
   }
@@ -126,7 +126,7 @@ $(document).ready(function () {
       //   $videoContainer.fadeOut(300);
       // }
 
-      if (music) {
+      if (music ) {
         closeMedia();
         $videoContainer.fadeOut(300);
       }
@@ -142,8 +142,8 @@ $(document).ready(function () {
     if (music) {
       music.pause();
     }
-    if (concept) {
-      concept.pause();
+    if (CONCEPT) {
+      CONCEPT.pause();
     }
   }
 
@@ -195,13 +195,13 @@ $(document).ready(function () {
         $descriptionLi.eq(1).text("音樂：" + _music[_key].name).css("opacity", 1);
         music.play();
         break;
-      case "concept":
-        if (concept) {
-          concept.pause();
+      case "CONCEPT":
+        if (CONCEPT) {
+          CONCEPT.pause();
         }
-        concept = new Audio(_voice[_key].url);
+        CONCEPT = new Audio(_voice[_key].url);
         $descriptionLi.eq(2).text("旁白：" + _voice[_key].name).css("opacity", 1);
-        concept.play();
+        CONCEPT.play();
         break;
     }
   }
@@ -236,7 +236,7 @@ $(document).ready(function () {
       case "music":
         _title = _music[_key].name;
         break;
-      case "concept":
+      case "CONCEPT":
         _title = _voice[_key].name;
         break;
       case "video":
