@@ -25,11 +25,14 @@
     }
     .logo-box{
       text-align: center;
-      margin-bottom: 45px;
+      margin-bottom: 35px;
       img{
         height: 75px;
-        margin: 15px;
+        margin: 25px;
         display: inline-block;
+        &:last-child{
+          height: 130px;
+        }
       }
     }
   }

@@ -2294,8 +2294,9 @@ body { overflow: hidden; }
 .menu .description { max-width: 600px; margin: 60px auto 120px; }
 .menu .description h5 { margin-bottom: 45px; }
 .menu .description p { color: #eee; line-height: 1.55em; }
-.menu .description .logo-box { text-align: center; margin-bottom: 45px; }
-.menu .description .logo-box img { height: 75px; margin: 15px; display: inline-block; }
+.menu .description .logo-box { text-align: center; margin-bottom: 35px; }
+.menu .description .logo-box img { height: 75px; margin: 25px; display: inline-block; }
+.menu .description .logo-box img:last-child { height: 130px; }
 .menu h5 { color: #fff; margin-bottom: -15px; font-size: 21px; text-align: center; letter-spacing: 1px; }
 .menu .main-share { display: flex; flex-wrap: wrap; max-width: 1440px; margin: auto; }
 .menu .main-share > li { width: 33.333333%; text-align: center; }
