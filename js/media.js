@@ -70,40 +70,43 @@ $(document).ready(function () {
 
   var player;
   var music;
-  var CONCEPT;
+  var voice;
   var autoPlayTimeout;
+  var playScene;
 
   const $cut = $('.cut');
   const _autoMedia = [
     {
       video: 2,
       music: 1,
-      CONCEPT: 4
+      voice: 4
     },
     {
       video: 10,
       music: 4,
-      CONCEPT: 5
+      voice: 5
     },
     {
       video: 16,
       music: 10,
-      CONCEPT: 12
+      voice: 12
     },
     {
       video: 19,
       music: 13,
-      CONCEPT: 13
+      voice: 13
     }
   ];
 
   function autoPlay(i) {
     clearTimeout(autoPlayTimeout);
+    playScene = i;
     autoPlayTimeout = setTimeout(function () {
+      autoPlayOn = false;
       playMedia("video", _autoMedia[i].video);
       playMedia("music", _autoMedia[i].music);
-      playMedia("CONCEPT", _autoMedia[i].CONCEPT);
-    }, 1500);
+      playMedia("voice", _autoMedia[i].voice);
+    }, 3000);
     autoPlayTimeout;
   }
 
@@ -113,6 +116,9 @@ $(document).ready(function () {
       const _zoneStart = i * _scrollValue;
       const _activeZoneStart = (i + 0.7) * _scrollValue;
       const _activeZoneEnd = (i + 0.9) * _scrollValue;
+      if (scroll < _zoneStart) {
+        return;
+      }
       if (scroll > _activeZoneStart && scroll < _activeZoneEnd) {
         const _cutValue = i + 1;
         const _classValue = "video-" + _cutValue;
@@ -121,14 +127,9 @@ $(document).ready(function () {
         autoPlay(i);
       }
 
-      // if (scroll > _zoneStart || (scroll < _activeZoneStart || scroll > _activeZoneEnd)) {
-      //   closeMedia();
-      //   $videoContainer.fadeOut(300);
-      // }
-
-      if (music ) {
+      if (music || i != playScene) {
         closeMedia();
-        $videoContainer.fadeOut(300);
+        $videoContainer.css("display", "none");
       }
     }
   });
@@ -141,9 +142,11 @@ $(document).ready(function () {
     $descriptionLi.css("opacity", 0).text('');
     if (music) {
       music.pause();
+      music = null;
     }
-    if (CONCEPT) {
-      CONCEPT.pause();
+    if (voice) {
+      voice.pause();
+      voice = null;
     }
   }
 
@@ -195,13 +198,13 @@ $(document).ready(function () {
         $descriptionLi.eq(1).text("音樂：" + _music[_key].name).css("opacity", 1);
         music.play();
         break;
-      case "CONCEPT":
-        if (CONCEPT) {
-          CONCEPT.pause();
+      case "voice":
+        if (voice) {
+          voice.pause();
         }
-        CONCEPT = new Audio(_voice[_key].url);
+        voice = new Audio(_voice[_key].url);
         $descriptionLi.eq(2).text("旁白：" + _voice[_key].name).css("opacity", 1);
-        CONCEPT.play();
+        voice.play();
         break;
     }
   }
@@ -236,7 +239,7 @@ $(document).ready(function () {
       case "music":
         _title = _music[_key].name;
         break;
-      case "CONCEPT":
+      case "voice":
         _title = _voice[_key].name;
         break;
       case "video":
