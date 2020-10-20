@@ -23,11 +23,20 @@
       color: #eee;
       line-height: 1.55em;
     }
+    .logo-box{
+      text-align: center;
+      margin-bottom: 45px;
+      img{
+        height: 75px;
+        margin: 15px;
+        display: inline-block;
+      }
+    }
   }
   h5{
     color: #fff;
     margin-bottom: -15px;
-    font-size: 18px;
+    font-size: 21px;
     text-align: center;
     letter-spacing: 1px;
   }
