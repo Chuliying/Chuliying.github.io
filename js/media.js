@@ -83,7 +83,7 @@ $(document).ready(function () {
     },
     {
       video: 10,
-      music: 4,
+      music: 7,
       voice: 5
     },
     {
