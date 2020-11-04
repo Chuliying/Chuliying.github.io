@@ -13,6 +13,9 @@ a {
 
 body {
   overflow: hidden;
+  @media (max-width: 776px) {
+    overflow: auto;
+  }
   //height: 4 * $scrollValue + 600;
 }
 
@@ -24,7 +27,8 @@ body {
   top: 0;
   left: 0;
   @media (max-width: 776px) {
-    display: none;
+    position: relative;
+    min-height: 100vh;
   }
   &.visited {
     .header {
@@ -64,7 +68,7 @@ body {
   z-index: 10001;
   height: 0;
   opacity: 0;
-  .info{
+  .info {
     position: absolute;
     top: 23px;
     right: 85px;
@@ -76,13 +80,13 @@ body {
     line-height: 23px;
     text-align: center;
     cursor: pointer;
-    &:hover{
-      p{
+    &:hover {
+      p {
         display: block;
       }
     }
-    p{
-      display: none; 
+    p {
+      display: none;
       position: absolute;
       top: 100%;
       right: 0;
@@ -98,14 +102,28 @@ body {
 
   img {
     width: 300px;
+    @media (max-width: $xs) {
+      width: 180px;
+    }
   }
   .hamburger-container {
     position: absolute;
     right: 15px;
     top: 15px;
+    @media (max-width: $xs) {
+      right: 0;
+    }
   }
 }
-
+.bg-m {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  z-index: -1;
+}
 .bg {
   position: absolute;
   top: 0;
@@ -113,6 +131,7 @@ body {
   height: 100%;
   width: 100%;
   pointer-events: none;
+
   img {
     width: 100%;
     height: 100%;
@@ -205,7 +224,7 @@ body {
     }
   }
 }
-.video-container {
+.video-container,.music-container {
   pointer-events: none;
   overflow: hidden;
   position: absolute;
@@ -214,6 +233,44 @@ body {
   z-index: 10000;
   background: black;
   display: none;
+  @media (max-width: $xs) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 100000;
+    pointer-events: auto;
+    overflow: hidden;
+  }
+  .remove-btn {
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    cursor: pointer;
+    z-index: 10000000;
+
+    &::before,
+    &::after {
+      content: "";
+      background: #fff;
+      position: absolute;
+      height: 100%;
+      width: 1px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
   &#video-1 {
     top: 26%;
     left: 37%;
@@ -246,6 +303,12 @@ body {
     left: 0;
     width: 100%;
     height: calc(100% + 120px);
+    @media (max-width: $xs) {
+      top: 65px;
+      height: calc(100% - 65px);
+      z-index: 100000;
+      pointer-events: auto;
+    }
   }
 }
 
@@ -375,7 +438,7 @@ body {
     &.active {
       display: inline-block;
     }
-    img{
+    img {
       height: 38px;
     }
   }
@@ -434,4 +497,81 @@ body {
       color: #fff;
     }
   }
+}
+
+.main-page {
+  padding: 25px;
+  padding-top: 80px;
+  //overflow: auto;
+  //height: 100%;
+  margin-top: -15px;
+  position: relative;
+
+  .clip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.3;
+    overflow: hidden;
+    height: 100%;
+    padding-top: 100px!important;
+    img {
+      max-width: 100%;
+    }
+    li {
+      margin-bottom: 425px;
+    }
+  }
+
+  .block {
+    margin: 45px auto 90px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s;
+
+    &.active {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+
+    .btn, .music-btn {
+      margin: 35px auto;
+      background-color: #222;
+      color: #fff;
+      border-radius: 2.5px;
+      padding: 10px 15px;
+      display: table;
+      font-size: 14px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .img-box {
+      margin-bottom: 45px;
+    }
+
+    li {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      img {
+        width: 80%;
+      }
+    }
+
+    p {
+      color: #222;
+    }
+  }
+}
+
+.return-btn {
+  text-align: center;
+  text-decoration: underline;
+  padding-top: 45px;
+  display: block;
 }

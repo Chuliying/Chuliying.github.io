@@ -13,11 +13,22 @@
   display: none;
   padding: 60px 45px;
   overflow: auto;
+  @media (max-width: $xs) {
+    padding: 25px;
+  }
   .description{
     max-width: 600px;
     margin: 60px auto 120px;
+    @media (max-width: $xs) {
+      margin: 45px auto;
+      padding-bottom: 25px;
+      border-bottom: dashed 1px #ccc;
+    }
     h5{
       margin-bottom: 45px;
+      @media (max-width: $xs) {
+        margin-top: 75px;
+      }
     }
     p{
       color: #eee;
@@ -27,6 +38,10 @@
       text-align: center;
       margin-bottom: 35px;
       img{
+        @media (max-width: $xs) {
+          width: auto;
+          height: auto;
+        }
         height: 75px;
         margin: 25px;
         display: inline-block;
@@ -42,6 +57,9 @@
     font-size: 21px;
     text-align: center;
     letter-spacing: 1px;
+    @media (max-width: $xs) {
+      margin-bottom: 15px;
+    }
   }
 
   .main-share{
@@ -52,12 +70,18 @@
     >li{
       width: 33.333333%;
       text-align: center;
+      @media (max-width: $xs) {
+        width: 100%;
+      }
       div{
         img{
           margin: 10vh auto 25px;
           height: 250px;
           width: 250px;
           border-radius : 100%;
+          @media (max-width: $xs) {
+            margin-top: 15px;
+          }
         }
         
         h5{
@@ -66,6 +90,11 @@
           font-family: 'Gentium Basic', serif;
           font-weight: normal;
           color: #fff;
+
+          @media (max-width: $xs) {
+            margin-bottom: 45px;
+            font-size: 18px;
+          }
         
         }
       }
@@ -81,8 +110,16 @@
     //position: absolute;
     //top: 52%;
     //height: 40%;
+    @media (max-width: $xs) {
+      padding: 0;
+      border-top: dashed 1px #ccc;
+    }
     h5{
       margin-bottom: 45px;
+      @media (max-width: $xs) {
+        text-align: left;
+        margin-bottom: 25px;
+      }
     }
     a{
       color: #fff;
@@ -97,6 +134,10 @@
       margin: auto;
       margin-top: 25px;
       display: flex;
+
+      @media (max-width: $xs) {
+        display: block;
+      }
       
       li{
         display: inline-block;
@@ -105,6 +146,9 @@
         color: #eee;
         &:first-child{
           width: 33%;
+          @media (max-width: $xs) {
+            width: 100%;
+          }
         }
         &:last-child{
           flex: 1;
@@ -131,6 +175,9 @@
   -moz-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
+  @media (max-width: $xs) {
+    transform: scale(0.4);
+  }
 
   span{
     display: block;
