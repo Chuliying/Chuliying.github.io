@@ -27,7 +27,6 @@ body {
   top: 0;
   left: 0;
   @media (max-width: 776px) {
-    position: relative;
     min-height: 100vh;
   }
   &.visited {
