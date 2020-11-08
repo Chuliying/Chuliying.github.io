@@ -527,6 +527,10 @@ body {
     opacity: 0;
     transition: 1s;
 
+    &:last-child{
+      margin-bottom: 25px;
+    }
+
     &.active {
       opacity: 1;
       transform: translateY(0px);
@@ -571,4 +575,23 @@ body {
   text-decoration: underline;
   padding-top: 45px;
   display: block;
+  position: relative;
+  color: #222;
+
+  // >div{
+  //   display: inline-block;
+  //   vertical-align: middle;
+  //   &:last-child{
+  //     width: 1em;
+  //     background: #000;
+  //     color: #fff;
+  //     padding: 5px;
+  //   }
+  // }
+  // .img{
+  //   margin-left: 15px;
+  //   img{
+  //     width: 150px;
+  //   }
+  // }
 }
