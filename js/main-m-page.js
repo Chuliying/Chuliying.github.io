@@ -5,7 +5,6 @@ $(document).ready(function () {
             loadbar();
             function id(v) { return document.getElementById(v); }
             function loadbar() {
-                console.log(123);
                 var ovrl = id("overlay"),
                     prog = id("progress"),
                     stat = id("progstat"),
@@ -33,7 +32,6 @@ $(document).ready(function () {
                     tImg.onerror = imgLoaded;
                     tImg.src = img[i].src;
                 }
-
             }
             document.addEventListener('DOMContentLoaded', loadbar, false);
 
