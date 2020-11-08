@@ -451,12 +451,12 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  background: #f7f7f7;
+  background: #222;
   transition: 1s 0.4s;
 }
 #progress {
-  height: 1px;
-  background: #555;
+  height: 2px;
+  background: #eee;
   position: absolute;
   width: 0;
   top: 50%;
@@ -469,7 +469,7 @@ body {
   margin-top: -50px;
   width: 100%;
   text-align: center;
-  color: #555;
+  color: #eee;
 }
 
 .mobile {
