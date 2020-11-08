@@ -562,6 +562,6 @@ $(document).ready(function () {
         }
     }   
     else{
-        window.location = "index-m";
+        window.location = "index-m"; 
     }
 });
