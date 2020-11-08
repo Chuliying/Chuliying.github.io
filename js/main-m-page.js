@@ -154,30 +154,30 @@ $(document).ready(function () {
             $landingBtn.click(function () {
                 localStorage.setItem('visited', true);
             });
-        }
 
-        const $block = $('.block');
-        $block.each(function (i) {
-            gsap.to($(this), {
-                scrollTrigger: {
-                    trigger: this,
-                    start: 'top 70%',
-                    end: '1000%',
-                    toggleClass: { targets: $(this), className: "active" }
-                }
+            const $block = $('.block');
+            $block.each(function (i) {
+                gsap.to($(this), {
+                    scrollTrigger: {
+                        trigger: this,
+                        start: 'top 70%',
+                        end: '1000%',
+                        toggleClass: { targets: $(this), className: "active" }
+                    }
+                });
             });
-        });
-        const $clipLi = $('.clip li')
-        // 裝飾物件動態
-        $clipLi.each(function (i) {
-            gsap.to($(this), {
-                scrollTrigger: {
-                    scrub: 1
-                },
-                yPercent: (i, target) => ScrollTrigger.maxScroll(window) * target.dataset.speed * 1,
-                ease: "slow"
-            });
-        })
+            const $clipLi = $('.clip li')
+            // 裝飾物件動態
+            $clipLi.each(function (i) {
+                gsap.to($(this), {
+                    scrollTrigger: {
+                        scrub: 1
+                    },
+                    yPercent: (i, target) => ScrollTrigger.maxScroll(window) * target.dataset.speed * 1,
+                    ease: "slow"
+                });
+            })
+        }
     }
     const $musicBtn = $('.music-btn');
     const $musicContainer = $('.music-container');
