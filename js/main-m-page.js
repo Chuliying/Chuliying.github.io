@@ -16,7 +16,7 @@ $(document).ready(function () {
                     c += 1;
                     var perc = ((100 / tot * c) << 0) + "%";
                     prog.style.width = perc;
-                    stat.innerHTML = "Loading " + perc;
+                    stat.innerHTML = "LOADING " + perc;
                     if (c === tot) return doneLoading();
                 }
                 function doneLoading() {

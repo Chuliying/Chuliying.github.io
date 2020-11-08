@@ -115,6 +115,18 @@
             z-index: 9;
             transform: perspective(150px) translateZ(-400px);
             li {
+                @media (max-width: $xs) {
+                    &:nth-child(even) {
+                        img {
+                            transform: translateX(-375px);
+                        }
+                    }
+                    &:nth-child(odd) {
+                        img {
+                            transform: translateX(375px);
+                        }
+                    }
+                }
                 &:nth-child(1) {
                     img {
                         bottom: -10%;
