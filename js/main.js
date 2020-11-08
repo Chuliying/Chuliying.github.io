@@ -560,8 +560,5 @@ $(document).ready(function () {
                 immediateRender: false
             })
         }
-    }   
-    else{
-        window.location = "index-m"; 
     }
 });
