@@ -42,7 +42,7 @@ $(document).ready(function () {
     { name: "鳶山遙想河運時代", url: "media/transport.mp3" },
     { name: "甕之音", url: "media/urn.mp3" },
     { name: "鶯歌石黃昏風雨將至", url: "media/yingge.mp3" },
-    { name: "八里聲音散步", url: "media/media/walk.mp3" },
+    { name: "八里聲音散步", url: "media/walk.mp3" },
     { name: "千年", url: "media/millennium.mp3" },
     { name: "無知的音樂家：大坌坑聯想", url: "media/musian.mp3" },
     { name: "夜宴", url: "media/banquet.mp3" },
@@ -98,10 +98,18 @@ $(document).ready(function () {
     }
   ];
 
+  _autoTrigger = true;
+
   function autoPlay(i) {
+    if (!_autoTrigger){
+      return;
+    }
     clearTimeout(autoPlayTimeout);
     playScene = i;
     autoPlayTimeout = setTimeout(function () {
+      if (!_autoTrigger){
+        return;
+      }
       autoPlayOn = false;
       playMedia("video", _autoMedia[i].video);
       playMedia("music", _autoMedia[i].music);
@@ -163,6 +171,8 @@ $(document).ready(function () {
 
   function playMedia(_type, _key) {
     clearTimeout(autoPlayTimeout);
+    _autoTrigger = false;
+    
     switch (_type) {
       case "video":
         $videoContainer.fadeIn(300);
